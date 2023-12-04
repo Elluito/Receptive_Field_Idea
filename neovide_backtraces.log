@@ -1,0 +1,62 @@
+2023-11-15 13:26:34 - Neovide panicked with the message 'Could not setup setting notifier for input_macos_alt_is_meta: Error sending request 'nvim_command''. (File: src/error_handling.rs; Line: 5, Column: 5)
+   0: <unknown>
+   1: <unknown>
+   2: <unknown>
+   3: <unknown>
+   4: <unknown>
+   5: <unknown>
+   6: <unknown>
+   7: <unknown>
+   8: <unknown>
+   9: <unknown>
+  10: <unknown>
+  11: <unknown>
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+
+2023-11-15 13:31:35 - Neovide panicked with the message 'Could not setup setting notifier for floating_blur_amount_x: Error sending request 'nvim_command''. (File: src/error_handling.rs; Line: 5, Column: 5)
+   0: <unknown>
+   1: <unknown>
+   2: <unknown>
+   3: <unknown>
+   4: <unknown>
+   5: <unknown>
+   6: <unknown>
+   7: <unknown>
+   8: <unknown>
+   9: <unknown>
+  10: <unknown>
+  11: <unknown>
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+
+2023-11-15 13:31:36 - Neovide panicked with the message 'called `Result::unwrap()` on an `Err` value: SendError { .. }'. (File: src/event_aggregator.rs; Line: 51, Column: 28)
+   0: <unknown>
+   1: <unknown>
+   2: <unknown>
+   3: <unknown>
+   4: <unknown>
+   5: <unknown>
+   6: <unknown>
+   7: <unknown>
+   8: <unknown>
+   9: <unknown>
+  10: <unknown>
+  11: <unknown>
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: <unknown>
+  22: __libc_start_main
+  23: <unknown>
+

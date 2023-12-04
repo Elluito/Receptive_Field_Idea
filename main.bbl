@@ -1,0 +1,63 @@
+\begin{thebibliography}{11}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Deng et~al.(2009)Deng, Dong, Socher, Li, Li, and {Fei-Fei}]{dengImageNetLargescaleHierarchical2009}
+J.~Deng, W.~Dong, R.~Socher, L.-J. Li, K.~Li, and L.~{Fei-Fei}.
+\newblock {{ImageNet}}: {{A}} large-scale hierarchical image database.
+\newblock In \emph{2009 {{IEEE Conference}} on {{Computer Vision}} and {{Pattern Recognition}}}, pages 248--255, June 2009.
+\newblock \doi{10.1109/CVPR.2009.5206848}.
+
+\bibitem[Devlin et~al.(2019)Devlin, Chang, Lee, and Toutanova]{devlinBERTPretrainingDeep2019}
+J.~Devlin, M.-W. Chang, K.~Lee, and K.~Toutanova.
+\newblock {{BERT}}: {{Pre-training}} of {{Deep Bidirectional Transformers}} for {{Language Understanding}}.
+\newblock In \emph{Proceedings of the 2019 {{Conference}} of the {{North American Chapter}} of the {{Association}} for {{Computational Linguistics}}: {{Human Language Technologies}}, {{Volume}} 1 ({{Long}} and {{Short Papers}})}, pages 4171--4186, {Minneapolis, Minnesota}, June 2019. {Association for Computational Linguistics}.
+\newblock \doi{10.18653/v1/N19-1423}.
+
+\bibitem[Goodfellow et~al.(2016)Goodfellow, Bengio, and Courville]{goodfellowDeepLearning2016}
+I.~Goodfellow, Y.~Bengio, and A.~Courville.
+\newblock \emph{Deep Learning}.
+\newblock {MIT Press}, 2016.
+
+\bibitem[Jastrz{\k{e}}bski et~al.(2019)Jastrz{\k{e}}bski, Kenton, Ballas, Fischer, Bengio, and Storkey]{jastrzebskiRelationSharpestDirections2019}
+S.~Jastrz{\k{e}}bski, Z.~Kenton, N.~Ballas, A.~Fischer, Y.~Bengio, and A.~Storkey.
+\newblock On the {{Relation Between}} the {{Sharpest Directions}} of {{DNN Loss}} and the {{SGD Step Length}}, Dec. 2019.
+
+\bibitem[Kim et~al.(2023)Kim, Choi, Jang, Lee, Jeong, and Kim]{kimDeadPixelTest2023}
+B.~J. Kim, H.~Choi, H.~Jang, D.~G. Lee, W.~Jeong, and S.~W. Kim.
+\newblock Dead pixel test using effective receptive field.
+\newblock \emph{Pattern Recognition Letters}, 167:\penalty0 149--156, Mar. 2023.
+\newblock ISSN 0167-8655.
+\newblock \doi{10.1016/j.patrec.2023.02.018}.
+
+\bibitem[Kobayashi and Shouno(2020)]{kobayashiInterpretationResNetVisualization2020}
+G.~Kobayashi and H.~Shouno.
+\newblock Interpretation of {{ResNet}} by {{Visualization}} of {{Preferred Stimulus}} in {{Receptive Fields}}, July 2020.
+
+\bibitem[Kornblith et~al.(2019)Kornblith, Norouzi, Lee, and Hinton]{kornblithSimilarityNeuralNetwork2019}
+S.~Kornblith, M.~Norouzi, H.~Lee, and G.~Hinton.
+\newblock Similarity of {{Neural Network Representations Revisited}}, July 2019.
+
+\bibitem[LeCun et~al.(2015)LeCun, Bengio, and Hinton]{lecunDeepLearning2015}
+Y.~LeCun, Y.~Bengio, and G.~Hinton.
+\newblock Deep learning.
+\newblock \emph{nature}, 521\penalty0 (7553):\penalty0 436--444, 2015.
+
+\bibitem[Luo et~al.(2016)Luo, Li, Urtasun, and Zemel]{luoUnderstandingEffectiveReceptive2016}
+W.~Luo, Y.~Li, R.~Urtasun, and R.~Zemel.
+\newblock Understanding the {{Effective Receptive Field}} in {{Deep Convolutional Neural Networks}}.
+\newblock In \emph{Advances in {{Neural Information Processing Systems}}}, volume~29. {Curran Associates, Inc.}, 2016.
+
+\bibitem[van~den Oord et~al.(2016)van~den Oord, Dieleman, Zen, Simonyan, Vinyals, Graves, Kalchbrenner, Senior, and Kavukcuoglu]{oordWaveNetGenerativeModel2016}
+A.~van~den Oord, S.~Dieleman, H.~Zen, K.~Simonyan, O.~Vinyals, A.~Graves, N.~Kalchbrenner, A.~Senior, and K.~Kavukcuoglu.
+\newblock {{WaveNet}}: {{A Generative Model}} for {{Raw Audio}}.
+\newblock \emph{arXiv:1609.03499 [cs]}, Sept. 2016.
+
+\bibitem[Zhou et~al.(2015)Zhou, Khosla, Lapedriza, Oliva, and Torralba]{zhouObjectDetectorsEmerge2015}
+B.~Zhou, A.~Khosla, A.~Lapedriza, A.~Oliva, and A.~Torralba.
+\newblock Object {{Detectors Emerge}} in {{Deep Scene CNNs}}, Apr. 2015.
+
+\end{thebibliography}

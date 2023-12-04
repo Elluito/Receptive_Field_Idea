@@ -1,0 +1,157 @@
+\documentclass{article}
+
+
+% ready for submission
+%\usepackage{neurips_2023}
+
+
+% to compile a preprint version, e.g., for submission to arXiv, add add the
+% [preprint] option:
+%     \usepackage[preprint]{neurips_2023}
+
+
+% to compile a camera-ready version, add the [final] option, e.g.:
+%     \usepackage[final]{neurips_2023}
+
+
+% to avoid loading the natbib package, add option nonatbib:
+    \usepackage[nonatbib,preprint]{neurips_2023}
+
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{xcolor}         % colors
+\usepackage[square,sort&compress]{natbib}
+\bibliographystyle{abbrvnat}
+%\usepackage{biblatex}
+%\addbibresource{references.bib}
+\usepackage{cleveref}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{todonotes}
+\usepackage{float}
+
+
+
+\title{Receptive Field and Neural Networks Representations}
+
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to LaTeX to determine where to break the
+% lines. Using \AND forces a line break at that point. So, if LaTeX puts 3 of 4
+% authors names on the first line, and the last on the second line, try using
+% \AND instead of \And before the third author name.
+
+
+\author{%
+  Luis Alfredo Avendaño Muñoz.~\thanks{Use footnote for providing further information
+    about author (webpage, alternative address)---\emph{not} for acknowledging
+    funding agencies.} \\
+  School of Computing\\
+  University of Leeds\\
+  Leeds, United Kingdom \\
+  \texttt{sclaam@leeds.ac.uk} \\
+  % examples of more authors
+  % \And
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+  % \AND
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+  % \And
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+  % \And
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+}
+
+
+
+\begin{document}
+
+
+\maketitle
+
+
+\begin{abstract}
+\end{abstract}
+
+\section{Introduction}
+\input{00-introduction.tex}
+
+\section{Related Work}
+\input{01-related_works.tex}
+\section{Experimental results}
+\input{03-experimental_results.tex}
+\section{Conclusions and Future work}
+\label{sec:conclusion}
+
+
+
+ In this work we showed how the receptive field affects the loss landscape of neural networks along with its
+ representations and its behaviour on the input image.
+Is important to note that there are other ways to manipulate the receptive field such as change the kernel size of the
+convolutional networks,stride and dilation of the convolutional networks. I this work we wanted to have the minimum
+intervention that would not modify the number of weights of the models as we manipulated the receptive field of the
+models. Additionally, in our experiments, as we changed the receptive field also the size of the feature maps were
+altered. Future work will concentrate on testing other ways to manipulate the receptive field to test the robustness of
+the findings in this work.
+
+
+
+%  References follow the acknowledgments in the camera-ready paper. Use unnumbered first-level heading for
+%  the references. Any choice of citation style is acceptable as long as you are
+%  consistent. It is permissible to reduce the font size to \verb+small+ (9 point)
+%  when listing the references.
+%  Note that the Reference section does not count towards the page limit.
+  
+
+  %\printbibliography
+ % \nocite{*}
+
+%  {
+%  \small
+%
+%
+%  [1] Alexander, J.A.\ \& Mozer, M.C.\ (1995) Template-based algorithms for
+%  connectionist rule extraction. In G.\ Tesauro, D.S.\ Touretzky and T.K.\ Leen
+%  (eds.), {\it Advances in Neural Information Processing Systems 7},
+%  pp.\ 609--616. Cambridge, MA: MIT Press.
+%
+%
+%  [2] Bower, J.M.\ \& Beeman, D.\ (1995) {\it The Book of GENESIS: Exploring
+%    Realistic Neural Models with the GEneral NEural SImulation System.}  New York:
+%  TELOS/Springer--Verlag.
+%
+%
+%  [3] Hasselmo, M.E., Schnell, E.\ \& Barkai, E.\ (1995) Dynamics of learning and
+%  recall at excitatory recurrent synapses and cholinergic modulation in rat
+%  hippocampal region CA3. {\it Journal of Neuroscience} {\bf 15}(7):5249-5262.
+%  }
+%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %                    REFERENCES                            %
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \bibliography{references.bib}
+  
+\section*{Supplementary Material}
+\input{09-supplementary_material.tex}
+  \end{document}

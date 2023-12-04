@@ -1,0 +1,55 @@
+﻿%\begin{itemize}
+%
+% \item Neural networks learn hierarchical features (some citations), They are able learn different levels of features
+%   and integrate them correctly for the task at hand (deep learning book citation or Yan Lecunn lectures object
+%   detectors in scene classifiers)
+%   \item The receptive field of a model is known to be related to how the representations of neural networks are formed
+%     yet, their relationship is still not well understood.
+%   \item Additionally, the effect of the receptive field on the loss landscape of neural networks has not been
+%     investigated (to the best of our knowledge)
+%
+%     \item In this paper we explore the relationship between the receptive field of neural networks and their loss
+%       landscape. We show that larger receptive fields are not necessarily better for performance in image
+%       classification. But instead, we show that they are important for learning features robust to pruning.
+%\end{itemize}
+%
+
+Neural networks have emerged as the standard approach for a wide range of applications, ranging from image recognition
+\citep{dengImageNetLargescaleHierarchical2009} to natural language processing \citep{devlinBERTPretrainingDeep2019} and speech synthesis
+\citep{oordWaveNetGenerativeModel2016,lecunDeepLearning2015}.
+% Pruning Part of the introduction
+%However, as neural networks become
+%increasingly complex, they demand more computing power and memory resources \citep{brownLanguageModelsAre2020,
+%thompsonComputationalLimitsDeep2020} This has led to an escalating interest in compression techniques that can retain or efficiently recover performance while reducing the size of neural networks.
+%%%%%%%
+Neural networks owe their expressiveness to the ability to learn hierarchical features and representations form the data
+that are particularly suited for the task at hand \citep{goodfellowDeepLearning2016}. These features are influenced by
+the highly non-linear.
+
+
+
+The reason that make neural networks so good is the features that they learn from the data
+(\citep{zhouObjectDetectorsEmerge2015}),
+They learning general features in the first layers while in deeper layer they integrate and combine the simpler features and create
+more complex and detailed features. One aspect that greatly affects these representations, as well as training dynamics is the receptive field of
+neural networks, yet, its effect on the representations remains not fully understood.
+
+
+In this paper we systematically explore the relationship that the receptive field has with the representations of neural networks
+along with the loss landscape these models. We show that if we manipulate the receptive field by changing the kernel
+size of the first maxpooling layer leaving every other component static we can demonstrate that the models losses
+generalization capacity as we increase the receptive field. Surprisingly, for high levels of pruning, it turns out
+that the negative effect on accuracy have an inverse relationship with the receptive field. We show that the
+receptive fields greatly affects the loss landscape of the models as shown by the Hessian spectra at initialisation.
+
+We empirically validated our results with two different type of models  with similar number of parameters (VGG-like and
+Resnet50) and two different datasets with different image sizes,( CIFAR10 and Tiny imagenet)
+
+Our contributions are:
+\begin{itemize}
+  \item We show that the receptive field greatly affects the loss landscape defining the type of features that of these models an be
+    learning and in consequence affecting the robustness of the networks against pruning
+  \item We link the loss landscape to the features learned by the network and their robustness to pruning.
+\end{itemize}
+
+
