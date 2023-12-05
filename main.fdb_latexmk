@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1701793390 "main.aux" "main.bbl" "main" 1701793390 0
+["bibtex main"] 1701797748 "main.aux" "main.bbl" "main" 1701797748 0
   "./references.bib" 1701720594 710886 269d84b7f9998ed099d092442d91e9a0 ""
   "/usr/share/texmf-dist/bibtex/bst/natbib/abbrvnat.bst" 1689853683 26532 66bed5cc59495faaa3f9ae9af9fa5e42 ""
-  "main.aux" 1701793388 21073 eee5594b26ac5a8c6a570f0f1e4813d8 "pdflatex"
+  "main.aux" 1701797745 19876 1b6449548cfdb0037ae6fa80d31eca3c "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1701793386 "main.tex" "main.pdf" "main" 1701793390 2
+["pdflatex"] 1701797744 "main.tex" "main.pdf" "main" 1701797748 2
   "/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc" 1689853683 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1689853683 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm" 1689853683 4524 6bce29db5bc272ba5f332261583fee9c ""
@@ -195,15 +195,11 @@
   "00-introduction.tex" 1701605574 3759 6d50941d8f96d0432c2d0c2f9a27573b ""
   "01-related_works.tex" 1701719574 538 aed80b3603b52d0065b2afcd4d818c23 ""
   "03-experimental_results.tex" 1701721185 20402 1dd1e7e19c24c1e8a4240db5aa939086 ""
-  "09-supplementary_material.tex" 1701793376 25036 c84d1464f8417b994b8658d07ae36575 ""
+  "09-supplementary_material.tex" 1701797744 29594 7c25595bfc7cc042e0464fdc4a00ed56 ""
   "images/Hessian_spectre_resnet50_init_cifar10.png" 1701629875 23668 2a63ddfbc376f22d67652fc9712b7b21 ""
   "images/Hessian_spectre_resnet50_trained_cifar10.png" 1701629164 116659 c6072bbb5ffd703a70fa6a9f23950c52 ""
   "images/Hessian_spectre_vgg19_init_cifar10.png" 1701629478 29087 89aa2740f24a4a3b5e9faa2e02b5c5b4 ""
   "images/Hessian_spectre_vgg19_trained_cifar10.png" 1701629242 173723 0be3cc4c4d1c6ea2fb60e0259bcc33cb ""
-  "images/Supplementary_material/cifar10_resnet50_pruning_finetuned_results_0.9.png" 1701430213 29700 f9fddc4d2cf67c0be8c63b2975b062b3 ""
-  "images/Supplementary_material/cifar10_vgg19_pruning_finetuned_results_0.9.png" 1701430094 29682 aa4ce75c3044e8b43d301d22e7c5e0ea ""
-  "images/Supplementary_material/tiny_imagenet_resnet50_pruning_finetuned_results_0.9.png" 1701430261 30225 133bcdc8a9ab248565851566cbd42bf5 ""
-  "images/Supplementary_material/tiny_imagenet_vgg19_pruning_finetuned_results_0.9.png" 1701430237 30950 a23c9a90db3b4c7550628389c1059c75 ""
   "images/gradientProjection_resnet_50_110.png" 1701710668 17630 7f15f4d032e9209abaddeb71cd6ba0e8 ""
   "images/gradientProjection_resnet_50_213.png" 1701710687 17432 deeaa4724d5151107470b723ca72baaf ""
   "images/gradientProjection_resnet_50_318.png" 1701710786 22109 951b146da3637d64b3bbdbfb09d28f55 ""
@@ -216,9 +212,9 @@
   "images/resnet50_level2_similarity_cifar10.png" 1701340674 24843 0bba119f36579dc9c8f6957f88d7d9d6 ""
   "images/resnet50_level3_similarity_cifar10.png" 1701340856 22235 11d8d416b7ec1a04303b0fc178ee2af5 ""
   "images/resnet50_level4_similarity_cifar10.png" 1701340871 21728 03874180863d54d8f32830a6de4b2474 ""
-  "main.aux" 1701793388 21073 eee5594b26ac5a8c6a570f0f1e4813d8 "pdflatex"
-  "main.bbl" 1701793390 3904 ff1ff5a4d455944e4d1c300a97b3660d "bibtex main"
-  "main.out" 1701793388 1677 21ee872fc8283eec561887407df237ff "pdflatex"
+  "main.aux" 1701797745 19876 1b6449548cfdb0037ae6fa80d31eca3c "pdflatex"
+  "main.bbl" 1701797748 3904 ff1ff5a4d455944e4d1c300a97b3660d "bibtex main"
+  "main.out" 1701797745 1677 21ee872fc8283eec561887407df237ff "pdflatex"
   "main.tex" 1701720327 4853 58d3921533a8670472b81eefb4c233ab ""
   "neurips_2023.sty" 1699454450 11306 7a0a622cd12ea31e106a743bb7d4c3c6 ""
   (generated)

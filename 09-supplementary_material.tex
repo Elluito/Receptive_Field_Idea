@@ -10,7 +10,7 @@ For every combination 5 models were trained, pruned and fine-tuned. The error ba
 \todo[inline]{All of the following figures would be better on tables}
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
-\begin{table}[]
+\begin{table}[H]
 \begin{tabular}{@{}cccc@{}}
 \toprule
 \multicolumn{4}{c}{\textbf{VGG}}                                                                                                                                  \\ \midrule
@@ -26,16 +26,13 @@ For every combination 5 models were trained, pruned and fine-tuned. The error ba
 318                      & 92.22$\pm$0.244              & 92.14$\pm$0.227                                   & 0.080$\pm$0.036                                     \\
 423                      & 90.23$\pm$0.169              & 90.23$\pm$0.145                                   & -0.003$\pm$0.035                                    \\ \bottomrule
 \end{tabular}
-
-
-
 \caption{vgg and resent50 cifar10 pruning rate 0.8}
 \label{tab:cifar10 pruning rate08}
 \end{table}
 
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
-\begin{table}[]
+\begin{table}[H]
 \begin{tabular}{@{}cccc@{}}
 \toprule
 \multicolumn{4}{c}{\textbf{VGG}}                                                                                                                                  \\ \midrule
@@ -93,7 +90,7 @@ For every combination 5 models were trained, pruned and fine-tuned. The error ba
 \subsubsection*{Pruning rate 0.7}
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
-\begin{table}[]
+\begin{table}[H]
 \begin{tabular}{@{}cccc@{}}
 \toprule
 \multicolumn{4}{c}{\textbf{VGG}}                                                                                                                                  \\ \midrule
@@ -109,12 +106,13 @@ For every combination 5 models were trained, pruned and fine-tuned. The error ba
 318                      & 92.22$\pm$0.244              & 92.24$\pm$0.254                                   & -0.020$\pm$0.010                                    \\
 423                      & 90.23$\pm$0.169              & 90.23$\pm$0.175                                   & -0.007$\pm$0.006                                    \\ \bottomrule
 \end{tabular}
-\caption{vgg and resent50 cifar10 pruning rate 0.7}
+\caption{VGG and Resnet50 on CIFAR10 and pruning rate 0.7}
 \label{tab:cifar10 pruning rate07}
 \end{table}
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
-\begin{table}[]
+
+\begin{table}[H]
 \begin{tabular}{@{}cccc@{}}
 \toprule
 \multicolumn{4}{c}{\textbf{VGG}}                                                                                                                                  \\ \midrule
@@ -129,9 +127,10 @@ For every combination 5 models were trained, pruned and fine-tuned. The error ba
 318                      & 59.10$\pm$0.368              & 54.28$\pm$0.398                                   & 4.816$\pm$0.319                                     \\
 423                      & 56.53$\pm$0.279              & 54.41$\pm$0.449                                   & 2.128$\pm$0.216                                     \\ \bottomrule
 \end{tabular}
-\caption{vgg and resent50 tiny Image net pruning rate 0.7}
+\caption{VGG and Resnet50 on Tiny ImageNet and pruning rate 0.7}
 \label{tab:tiny imagenet pruning rate07}
 \end{table}
+
 %
 %\begin{figure}[h]
 % \centering
@@ -173,7 +172,7 @@ For every combination 5 models were trained, pruned and fine-tuned. The error ba
 
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
-\begin{table}[]
+\begin{table}[H]
 \begin{tabular}{@{}cccc@{}}
 \toprule
 \multicolumn{4}{c}{\textbf{VGG}}                                                                                                                                  \\ \midrule
@@ -198,7 +197,7 @@ For every combination 5 models were trained, pruned and fine-tuned. The error ba
 
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
-\begin{table}[]
+\begin{table}[H]
 \begin{tabular}{@{}cccc@{}}
 \toprule
 \multicolumn{4}{c}{\textbf{VGG}}                                                                                                                                  \\ \midrule
@@ -350,36 +349,81 @@ Here we fine-tuned the pruned solutions while preserving the mask for 10 epochs 
 \end{itemize}
 
 \todo[inline]{All of the following figures would be better on a table}
-\begin{figure}[!htb]
- \centering
-     \begin{subfigure}[b]{\columnwidth}
-    \includegraphics[width=1.1\columnwidth]{images/Supplementary_material/cifar10_vgg19_pruning_finetuned_results_0.9.png}
-    \caption{VGG}
-    \label{subfig:vgg19CIfar10FInetuned}
-     \end{subfigure}
-      \hfill
-     \begin{subfigure}[b]{\columnwidth}
-    \includegraphics[width=1.1\columnwidth]{images/Supplementary_material/cifar10_resnet50_pruning_finetuned_results_0.9.png}
-    \caption{ResNet-50}
-    \label{subfig:resenet50CIfar10FInetuned}
-     \end{subfigure}
-     \caption{ CIFAR10 Fine-tuned results}
-    \label{fig:finetuned_CIFAR10}
-  \end{figure}
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[H]
+\begin{tabular}{@{}cccc@{}}
+\toprule
+\multicolumn{4}{c}{\textbf{VGG}}                                                                                                                                  \\ \midrule
+\textbf{Receptive Field} & \textbf{Dense Test Accuracy} & \multicolumn{1}{l}{\textbf{Pruned  TestAccuracy}} & \multicolumn{1}{l}{\textbf{Difference In Accuracy}} \\ \midrule
+181                      & 93.52$\pm$0.115              & 91.42$\pm$2.026                                   & 2.106$\pm$2.111                                     \\
+359                      & 91.15$\pm$0.232              & 90.81$\pm$0.293                                   & 0.348$\pm$0.366                                     \\
+537                      & 87.88$\pm$0.193              & 87.85$\pm$0.223                                   & 0.032$\pm$0.070                                     \\
+715                      & 85.88$\pm$0.217              & 85.78$\pm$0.286                                   & 0.096$\pm$0.140                                     \\ \midrule
+\multicolumn{4}{c}{\textbf{ResNet50}}                                                                                                                             \\ \midrule
+\textbf{Receptive Field} & \textbf{Dense Test Accuracy} & \textbf{Pruned  TestAccuracy}                     & \textbf{Difference In Accuracy}                     \\
+110                      & 94.69$\pm$0.213              & 90.86$\pm$0.701                                   & 3.830$\pm$0.795                                     \\
+213                      & 94.03$\pm$0.236              & 93.55$\pm$0.211                                   & 0.477$\pm$0.197                                     \\
+318                      & 92.22$\pm$0.244              & 92.03$\pm$0.200                                   & 0.190$\pm$0.053                                     \\
+423                      & 90.23$\pm$0.169              & 90.23$\pm$0.147                                   & -0.007$\pm$0.087                                    \\ \bottomrule
+\end{tabular}
+\caption{VGG and ResNet50 on CIFAR10 with fine tuning and pruning rate 0.9}
+\label{tab:cifar10 fine tuning pruning rate 09}
+\end{table}
 
-\begin{figure*}[!htb]
- \centering
-     \begin{subfigure}[b]{\columnwidth}
-    \includegraphics[width=1.1\columnwidth]{images/Supplementary_material/tiny_imagenet_vgg19_pruning_finetuned_results_0.9.png}
-    \caption{VGG}
-    \label{subfig:vgg19_tiny_imagenet_FInetuned}
-     \end{subfigure}
-      \hfill
-     \begin{subfigure}[b]{\columnwidth}
-    \includegraphics[width=1.1\columnwidth]{images/Supplementary_material/tiny_imagenet_resnet50_pruning_finetuned_results_0.9.png}
-    \caption{ResNet-50}
-    \label{subfig:resenet50tiny_imagenetFinetuned}
-     \end{subfigure}
-     \caption{Tiny ImageNet Fine-tuned results}
-    \label{fig:finetuned_tiny_imagenet}
-\end{figure*}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[H]
+\begin{tabular}{@{}cccc@{}}
+\toprule
+\multicolumn{4}{c}{\textbf{VGG}}                                                                                                                                  \\ \midrule
+\textbf{Receptive Field} & \textbf{Dense Test Accuracy} & \multicolumn{1}{l}{\textbf{Pruned  TestAccuracy}} & \multicolumn{1}{l}{\textbf{Difference In Accuracy}} \\ \midrule
+181                      & 61.58$\pm$0.333              & 30.21$\pm$2.595                                   & 31.37$\pm$2.534                                     \\
+359                      & 53.25$\pm$0.207              & 3.558$\pm$2.027                                   & 49.69$\pm$2.188                                     \\
+537                      & 41.05$\pm$1.917              & 38.21$\pm$2.699                                   & 2.842$\pm$0.884                                     \\
+715                      & 38.57$\pm$1.691              & 36.45$\pm$1.549                                   & 2.126$\pm$0.762                                     \\ \midrule
+\multicolumn{4}{c}{\textbf{ResNet50}}                                                                                                                             \\ \midrule
+\textbf{Receptive Field} & \textbf{Dense Test Accuracy} & \textbf{Pruned  TestAccuracy}                     & \textbf{Difference In Accuracy}                     \\
+213                      & 61.83$\pm$0.401              & 44.56$\pm$1.205                                   & 17.27$\pm$1.346                                     \\
+318                      & 59.10$\pm$0.368              & 44.28$\pm$0.648                                   & 14.82$\pm$0.633                                     \\
+423                      & 56.53$\pm$0.279              & 46.16$\pm$0.716                                   & 10.37$\pm$0.577                                     \\ \bottomrule
+\end{tabular}
+\caption{VGG and ReseNet50 on Tiny ImageNet with fine tuning  and pruning rate of 0.9}
+\label{tab:cifar10 fine tuning pruning rate 09}
+\end{table}
+
+%
+%\begin{figure}[!htb]
+% \centering
+%     \begin{subfigure}[b]{\columnwidth}
+%    \includegraphics[width=1.1\columnwidth]{images/Supplementary_material/cifar10_vgg19_pruning_finetuned_results_0.9.png}
+%    \caption{VGG}
+%    \label{subfig:vgg19CIfar10FInetuned}
+%     \end{subfigure}
+%      \hfill
+%     \begin{subfigure}[b]{\columnwidth}
+%    \includegraphics[width=1.1\columnwidth]{images/Supplementary_material/cifar10_resnet50_pruning_finetuned_results_0.9.png}
+%    \caption{ResNet-50}
+%    \label{subfig:resenet50CIfar10FInetuned}
+%     \end{subfigure}
+%     \caption{ CIFAR10 Fine-tuned results}
+%    \label{fig:finetuned_CIFAR10}
+%  \end{figure}
+%
+%\begin{figure*}[!htb]
+% \centering
+%     \begin{subfigure}[b]{\columnwidth}
+%    \includegraphics[width=1.1\columnwidth]{images/Supplementary_material/tiny_imagenet_vgg19_pruning_finetuned_results_0.9.png}
+%    \caption{VGG}
+%    \label{subfig:vgg19_tiny_imagenet_FInetuned}
+%     \end{subfigure}
+%      \hfill
+%     \begin{subfigure}[b]{\columnwidth}
+%    \includegraphics[width=1.1\columnwidth]{images/Supplementary_material/tiny_imagenet_resnet50_pruning_finetuned_results_0.9.png}
+%    \caption{ResNet-50}
+%    \label{subfig:resenet50tiny_imagenetFinetuned}
+%     \end{subfigure}
+%     \caption{Tiny ImageNet Fine-tuned results}
+%    \label{fig:finetuned_tiny_imagenet}
+%\end{figure*}

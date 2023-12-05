@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.11.8)  5 DEC 2023 16:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.11.8)  5 DEC 2023 17:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -586,112 +586,16 @@ LaTeX Warning: Label `sub@fig:similarity_lvl4' multiply defined.
 LaTeX Warning: Label `sub@fig:similarity_lvl4@cref' multiply defined.
 
 
-LaTeX Warning: Label `subfig:vgg19CIfar10PR0.8' multiply defined.
+LaTeX Warning: Label `tab:tiny imagenet pruning rate06' multiply defined.
 
 
-LaTeX Warning: Label `subfig:vgg19CIfar10PR0.8@cref' multiply defined.
+LaTeX Warning: Label `tab:tiny imagenet pruning rate06@cref' multiply defined.
 
 
-LaTeX Warning: Label `sub@subfig:vgg19CIfar10PR0.8' multiply defined.
+LaTeX Warning: Label `tab:cifar10 fine tuning pruning rate 09' multiply defined.
 
 
-LaTeX Warning: Label `sub@subfig:vgg19CIfar10PR0.8@cref' multiply defined.
-
-
-LaTeX Warning: Label `subfig:resenet50CIfar10PR0.8' multiply defined.
-
-
-LaTeX Warning: Label `subfig:resenet50CIfar10PR0.8@cref' multiply defined.
-
-
-LaTeX Warning: Label `sub@subfig:resenet50CIfar10PR0.8' multiply defined.
-
-
-LaTeX Warning: Label `sub@subfig:resenet50CIfar10PR0.8@cref' multiply defined.
-
-
-LaTeX Warning: Label `subfig:vgg19CIfar10PR0.7' multiply defined.
-
-
-LaTeX Warning: Label `subfig:vgg19CIfar10PR0.7@cref' multiply defined.
-
-
-LaTeX Warning: Label `sub@subfig:vgg19CIfar10PR0.7' multiply defined.
-
-
-LaTeX Warning: Label `sub@subfig:vgg19CIfar10PR0.7@cref' multiply defined.
-
-
-LaTeX Warning: Label `subfig:resenet50CIfar10PR0.7' multiply defined.
-
-
-LaTeX Warning: Label `subfig:resenet50CIfar10PR0.7@cref' multiply defined.
-
-
-LaTeX Warning: Label `sub@subfig:resenet50CIfar10PR0.7' multiply defined.
-
-
-LaTeX Warning: Label `sub@subfig:resenet50CIfar10PR0.7@cref' multiply defined.
-
-
-LaTeX Warning: Label `fig:pr_0.7_CIFAR10' multiply defined.
-
-
-LaTeX Warning: Label `fig:pr_0.7_CIFAR10@cref' multiply defined.
-
-
-LaTeX Warning: Label `subfig:vgg19CIfar10PR0.6' multiply defined.
-
-
-LaTeX Warning: Label `subfig:vgg19CIfar10PR0.6@cref' multiply defined.
-
-
-LaTeX Warning: Label `sub@subfig:vgg19CIfar10PR0.6' multiply defined.
-
-
-LaTeX Warning: Label `sub@subfig:vgg19CIfar10PR0.6@cref' multiply defined.
-
-
-LaTeX Warning: Label `subfig:resenet50CIfar10PR0.6' multiply defined.
-
-
-LaTeX Warning: Label `subfig:resenet50CIfar10PR0.6@cref' multiply defined.
-
-
-LaTeX Warning: Label `sub@subfig:resenet50CIfar10PR0.6' multiply defined.
-
-
-LaTeX Warning: Label `sub@subfig:resenet50CIfar10PR0.6@cref' multiply defined.
-
-
-LaTeX Warning: Label `subfig:vgg19CIfar10PR0.5' multiply defined.
-
-
-LaTeX Warning: Label `subfig:vgg19CIfar10PR0.5@cref' multiply defined.
-
-
-LaTeX Warning: Label `sub@subfig:vgg19CIfar10PR0.5' multiply defined.
-
-
-LaTeX Warning: Label `sub@subfig:vgg19CIfar10PR0.5@cref' multiply defined.
-
-
-LaTeX Warning: Label `subfig:resenet50CIfar10PR0.5' multiply defined.
-
-
-LaTeX Warning: Label `subfig:resenet50CIfar10PR0.5@cref' multiply defined.
-
-
-LaTeX Warning: Label `sub@subfig:resenet50CIfar10PR0.5' multiply defined.
-
-
-LaTeX Warning: Label `sub@subfig:resenet50CIfar10PR0.5@cref' multiply defined.
-
-
-LaTeX Warning: Label `fig:pr_0.8_tiny_imagenet' multiply defined.
-
-
-LaTeX Warning: Label `fig:pr_0.8_tiny_imagenet@cref' multiply defined.
+LaTeX Warning: Label `tab:cifar10 fine tuning pruning rate 09@cref' multiply defined.
 
 )
 \openout1 = `main.aux'.
@@ -1006,80 +910,21 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6 <./images/gradientProjection_resnet_50_110.png> <./images/gradientProjection_resnet_50_213.png> <./images/gradientProjection_resnet_50_318.png> <./images/gradientProjection_resnet_50_423.png>]) (./main.bbl [7 <./images/gradientProjection_vgg19_1.png> <./images/gradientProjection_vgg19_2.png> <./images/gradientProjection_vgg19_3.png> <./images/gradientProjection_vgg19_4.png>]) (./09-supplementary_material.tex
+Underfull \vbox (badness 3108) has occurred while \output is active []
+
+ [8]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 13.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 38.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 96.
+               Default added (so using `tbp') on input line 263.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 117.
+               Default added (so using `tbp') on input line 284.
 
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 176.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 201.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 264.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 285.
-
-[8] [9] [10]
-<images/Supplementary_material/cifar10_vgg19_pruning_finetuned_results_0.9.png, id=205, 1076.1003pt x 714.7503pt>
-File: images/Supplementary_material/cifar10_vgg19_pruning_finetuned_results_0.9.png Graphic file (type png)
-<use images/Supplementary_material/cifar10_vgg19_pruning_finetuned_results_0.9.png>
-Package pdftex.def Info: images/Supplementary_material/cifar10_vgg19_pruning_finetuned_results_0.9.png  used on input line 356.
-(pdftex.def)             Requested size: 437.2359pt x 290.41022pt.
-
-Overfull \hbox (39.75092pt too wide) in paragraph at lines 356--357
-[][] 
- []
-
-<images/Supplementary_material/cifar10_resnet50_pruning_finetuned_results_0.9.png, id=206, 1076.1003pt x 714.7503pt>
-File: images/Supplementary_material/cifar10_resnet50_pruning_finetuned_results_0.9.png Graphic file (type png)
-<use images/Supplementary_material/cifar10_resnet50_pruning_finetuned_results_0.9.png>
-Package pdftex.def Info: images/Supplementary_material/cifar10_resnet50_pruning_finetuned_results_0.9.png  used on input line 362.
-(pdftex.def)             Requested size: 437.2359pt x 290.41022pt.
-
-Overfull \hbox (39.75092pt too wide) in paragraph at lines 362--363
-[][] 
- []
-
-<images/Supplementary_material/tiny_imagenet_vgg19_pruning_finetuned_results_0.9.png, id=207, 1076.1003pt x 714.7503pt>
-File: images/Supplementary_material/tiny_imagenet_vgg19_pruning_finetuned_results_0.9.png Graphic file (type png)
-<use images/Supplementary_material/tiny_imagenet_vgg19_pruning_finetuned_results_0.9.png>
-Package pdftex.def Info: images/Supplementary_material/tiny_imagenet_vgg19_pruning_finetuned_results_0.9.png  used on input line 373.
-(pdftex.def)             Requested size: 437.2359pt x 290.41022pt.
-
-Overfull \hbox (39.75092pt too wide) in paragraph at lines 373--374
-[][] 
- []
-
-<images/Supplementary_material/tiny_imagenet_resnet50_pruning_finetuned_results_0.9.png, id=208, 1076.1003pt x 714.7503pt>
-File: images/Supplementary_material/tiny_imagenet_resnet50_pruning_finetuned_results_0.9.png Graphic file (type png)
-<use images/Supplementary_material/tiny_imagenet_resnet50_pruning_finetuned_results_0.9.png>
-Package pdftex.def Info: images/Supplementary_material/tiny_imagenet_resnet50_pruning_finetuned_results_0.9.png  used on input line 379.
-(pdftex.def)             Requested size: 437.2359pt x 290.41022pt.
-
-Overfull \hbox (39.75092pt too wide) in paragraph at lines 379--380
-[][] 
- []
-
-) [11] [12 <./images/Supplementary_material/cifar10_vgg19_pruning_finetuned_results_0.9.png> <./images/Supplementary_material/cifar10_resnet50_pruning_finetuned_results_0.9.png>] [13 <./images/Supplementary_material/tiny_imagenet_vgg19_pruning_finetuned_results_0.9.png> <./images/Supplementary_material/tiny_imagenet_resnet50_pruning_finetuned_results_0.9.png>] (./main.aux)
+[10] [11]) [12] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1090,18 +935,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 21EE872FC8283EEC561887407DF237FF;1677.
  ) 
 Here is how much of TeX's memory you used:
- 26837 strings out of 477985
- 513082 string characters out of 5840058
- 1888388 words of memory out of 5000000
- 46318 multiletter control sequences out of 15000+600000
+ 26745 strings out of 477985
+ 508744 string characters out of 5840058
+ 1874388 words of memory out of 5000000
+ 46232 multiletter control sequences out of 15000+600000
  549035 words of font info for 188 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  99i,12n,94p,1001b,1238s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (13 pages, 1077103 bytes).
+Output written on main.pdf (12 pages, 927264 bytes).
 PDF statistics:
- 300 PDF objects out of 1000 (max. 8388607)
- 218 compressed objects within 3 object streams
- 65 named destinations out of 1000 (max. 500000)
- 38073 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 287 PDF objects out of 1000 (max. 8388607)
+ 214 compressed objects within 3 object streams
+ 64 named destinations out of 1000 (max. 500000)
+ 38053 words of extra memory for PDF output out of 42996 (max. 10000000)
 
