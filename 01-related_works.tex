@@ -5,18 +5,9 @@
       \item Interpretation of ResNet by Visualization of Preferred Stimulus in Receptive Fields \cite{kobayashiInterpretationResNetVisualization2020}
 \end{itemize}
  Previous works have been done in exploring the receptive field in deep convolutional neural networks.
- \cite{luoUnderstandingEffectiveReceptive2016}  investigate the \textit{Effective Receptive Field} (ERF) of a
- neural network. ERF is smaller than the theoretical receptive field and grows as the training progresses. They also
- showed how subsampling and dilation affect the ERF. In \cite{kobayashiInterpretationResNetVisualization2020} the
- authors find that ResNets have orientation-selective neurons and double opponent colour neurons by investigating the
+ \cite{luoUnderstandingEffectiveReceptive2016}  investigate the \textit{Effective Receptive Field} (ERF) of a neural network. ERF is smaller than the theoretical receptive field and grows as the training progresses. They also showed how subsampling and dilation affect the ERF. In \cite{kobayashiInterpretationResNetVisualization2020} the authors find that ResNets have orientation-selective neurons and double opponent colour neurons by investigating the
  preferred stimulus of the receptive field for a particular neuron. Lastly, \citep{kimDeadPixelTest2023} is the closest work
- to ours where they try to link the receptive field to the accuracy of the model. This work uses different models of the
- ResNet and WideResNet family and compares their performances and receptive fields. The main problem with this approach
- is that any change in accuracy might not be directly attributable to the receptive field given the differences in
- the number of parameters, depth and width between different models. Thus, our work measures the effect of only
- modifying the receptive. Additionally, our work shows the specific effect that modifying the receptive field has on a
- neural network loss landscape, namely, the `` ruggedness'' of the loss landscape as well as its performance in a better
- controlled environment.
+to ours, in which they try to link the receptive field to the accuracy of the model. This work uses different models of the ResNet and WideResNet family and compares their performance and receptive fields. The main problem with this approach is that any change in accuracy might not be directly attributable to the receptive field given the differences in the number of parameters, depth, and width between different models. Thus, our work measures the effect of only modifying the receptive. Furthermore, our work shows the specific effect that modifying the receptive field has on a neural network loss landscape, namely the ``ruggedness'' of the loss landscape, as well as its performance in a better controlled environment.
 
 
 
