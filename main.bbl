@@ -1,4 +1,4 @@
-\begin{thebibliography}{11}
+\begin{thebibliography}{10}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -21,10 +21,6 @@ J.~Devlin, M.-W. Chang, K.~Lee, and K.~Toutanova.
 I.~Goodfellow, Y.~Bengio, and A.~Courville.
 \newblock \emph{Deep Learning}.
 \newblock {MIT Press}, 2016.
-
-\bibitem[Jastrz{\k{e}}bski et~al.(2019)Jastrz{\k{e}}bski, Kenton, Ballas, Fischer, Bengio, and Storkey]{jastrzebskiRelationSharpestDirections2019}
-S.~Jastrz{\k{e}}bski, Z.~Kenton, N.~Ballas, A.~Fischer, Y.~Bengio, and A.~Storkey.
-\newblock On the {{Relation Between}} the {{Sharpest Directions}} of {{DNN Loss}} and the {{SGD Step Length}}, Dec. 2019.
 
 \bibitem[Kim et~al.(2023)Kim, Choi, Jang, Lee, Jeong, and Kim]{kimDeadPixelTest2023}
 B.~J. Kim, H.~Choi, H.~Jang, D.~G. Lee, W.~Jeong, and S.~W. Kim.

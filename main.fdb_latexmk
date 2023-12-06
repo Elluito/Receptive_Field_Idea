@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1701885092 "main.aux" "main.bbl" "main" 1701885734 0
-  "./references.bib" 1701857680 712145 0bd5eb0fb643bac9b13339de58060273 ""
+["bibtex main"] 1701903508 "main.aux" "main.bbl" "main" 1701903509 0
+  "./references.bib" 1701894887 712129 ab8d13e32042aeb435b08f52157b8f0c ""
   "/usr/share/texmf-dist/bibtex/bst/natbib/abbrvnat.bst" 1689853683 26532 66bed5cc59495faaa3f9ae9af9fa5e42 ""
-  "main.aux" 1701885734 19681 4c836333ed35879f8d00bef21e52b46d "pdflatex"
+  "main.aux" 1701903509 19318 2e4cf5dddedf6e194ebe1b3dd50eb386 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1701885732 "main.tex" "main.pdf" "main" 1701885734 0
+["pdflatex"] 1701903508 "main.tex" "main.pdf" "main" 1701903509 0
   "/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc" 1689853683 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1689853683 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm" 1689853683 4524 6bce29db5bc272ba5f332261583fee9c ""
@@ -191,8 +191,8 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1689853683 40684 9b9ec0b4288972636ff6a3b9c4238efc ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1699456857 4478157 b584cf688a392cfa15d6c4c16727e416 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1699439038 6768054 e4fa156f173b8bcd2820a7d496c950af ""
-  "00-introduction.tex" 1701605574 3759 6d50941d8f96d0432c2d0c2f9a27573b ""
-  "01-related_works.tex" 1701885731 1961 4b70111e34a2e1150de686176930ea86 ""
+  "00-introduction.tex" 1701903507 3859 32efc90965939c4cd2db53ad8e6f4776 ""
+  "01-related_works.tex" 1701894326 1963 4c6ff6964abb8bfa19ee81681774d768 ""
   "03-experimental_results.tex" 1701862915 20413 c03120bff7b84b284d89859a161be980 ""
   "09-supplementary_material.tex" 1701861106 29610 c961d41c9607711fa6d8ca45e095d8e5 ""
   "images/Hessian_spectre_resnet50_init_cifar10.png" 1701629875 23668 2a63ddfbc376f22d67652fc9712b7b21 ""
@@ -211,10 +211,10 @@
   "images/resnet50_level2_similarity_cifar10.png" 1701340674 24843 0bba119f36579dc9c8f6957f88d7d9d6 ""
   "images/resnet50_level3_similarity_cifar10.png" 1701340856 22235 11d8d416b7ec1a04303b0fc178ee2af5 ""
   "images/resnet50_level4_similarity_cifar10.png" 1701340871 21728 03874180863d54d8f32830a6de4b2474 ""
-  "main.aux" 1701885734 19681 4c836333ed35879f8d00bef21e52b46d "pdflatex"
-  "main.bbl" 1701885092 3904 ff1ff5a4d455944e4d1c300a97b3660d "bibtex main"
-  "main.out" 1701885734 1677 21ee872fc8283eec561887407df237ff "pdflatex"
-  "main.tex" 1701860527 4851 4d8a0551bc521437b47a615bcca46019 ""
+  "main.aux" 1701903509 19318 2e4cf5dddedf6e194ebe1b3dd50eb386 "pdflatex"
+  "main.bbl" 1701903508 3551 50f7d233f6988154fad488c3935f4747 "bibtex main"
+  "main.out" 1701903509 1677 21ee872fc8283eec561887407df237ff "pdflatex"
+  "main.tex" 1701889602 4859 cdc1841c02c4019621c6a5a8c5c5619d ""
   "neurips_2023.sty" 1699454450 11306 7a0a622cd12ea31e106a743bb7d4c3c6 ""
   (generated)
   "main.aux"

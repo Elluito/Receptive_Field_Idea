@@ -985,6 +985,7 @@ INPUT ./01-related_works.tex
 INPUT 01-related_works.tex
 INPUT ./01-related_works.tex
 INPUT 01-related_works.tex
+INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmri8t.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/adobe/times/ptmb8t.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
@@ -997,17 +998,16 @@ INPUT /usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
 INPUT /usr/share/texmf-dist/fonts/vf/adobe/times/ptmb8t.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/adobe/times/ptmr8c.vf
+INPUT /usr/share/texmf-dist/fonts/vf/adobe/times/ptmri8t.vf
+INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/adobe/times/ptmr8t.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/adobe/times/ptmri8t.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmri8t.tfm
 INPUT ./03-experimental_results.tex
 INPUT 03-experimental_results.tex
 INPUT ./03-experimental_results.tex
 INPUT 03-experimental_results.tex
-INPUT /usr/share/texmf-dist/fonts/vf/adobe/times/ptmri8t.vf
-INPUT /usr/share/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
 INPUT ./images/Hessian_spectre_vgg19_init_cifar10.png
 INPUT ./images/Hessian_spectre_vgg19_init_cifar10.png
 INPUT images/Hessian_spectre_vgg19_init_cifar10.png
