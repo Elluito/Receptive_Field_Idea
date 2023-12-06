@@ -7,7 +7,7 @@ Here are the implementation details.
 
 \label{subsec:OneShotPruningrates}
 For every combination 5 models were trained, pruned and fine-tuned. The error bars correspond to the standard deviation.
-\todo[inline]{All of the following figures would be better on tables}
+%\todo[inline]{All of the following figures would be better on tables}
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
 \begin{table}[H]
@@ -87,7 +87,7 @@ For every combination 5 models were trained, pruned and fine-tuned. The error ba
 %    \label{fig:pr_0.8_tiny_imagenet}
 %\end{figure}
 %
-\subsubsection*{Pruning rate 0.7}
+\subsubsection*{Pruning Rate 0.7}
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
 \begin{table}[H]
@@ -168,7 +168,7 @@ For every combination 5 models were trained, pruned and fine-tuned. The error ba
 %\end{figure}
 %
 %
-\subsubsection*{Pruning rate 0.6}
+\subsubsection*{Pruning Rate 0.6}
 
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
@@ -257,10 +257,10 @@ For every combination 5 models were trained, pruned and fine-tuned. The error ba
 %
 %\end{figure}
 %
-\subsubsection*{Pruning rate 0.5}
+\subsubsection*{Pruning Rate 0.5}
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
-\begin{table}[]
+\begin{table}[H]
 \begin{tabular}{@{}cccc@{}}
 \toprule
 \multicolumn{4}{c}{\textbf{VGG}}                                                                                                                                  \\ \midrule
@@ -276,12 +276,12 @@ For every combination 5 models were trained, pruned and fine-tuned. The error ba
 318                      & 92.22$\pm$0.244              & 92.22$\pm$0.229                                   & -0.003$\pm$0.015                                    \\
 423                      & 90.23$\pm$0.169              & 90.23$\pm$0.169                                   & 0.000$\pm$0.000                                     \\ \bottomrule
 \end{tabular}
-\caption{vgg and resent50 cifar10 pruning rate 0.5}
+\caption{VGG and ResNet50 on CIFAR10 with pruning rate 0.5}
 \label{tab:cifar10 pruning rate05}
 \end{table}
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
-\begin{table}[]
+\begin{table}[H]
 \begin{tabular}{@{}cccc@{}}
 \toprule
 \multicolumn{4}{c}{\textbf{VGG}}                                                                                                                                  \\ \midrule
@@ -296,7 +296,7 @@ For every combination 5 models were trained, pruned and fine-tuned. The error ba
 318                      & 59.10$\pm$0.368              & 58.46$\pm$0.510                                   & 0.640$\pm$0.401                                     \\
 423                      & 56.53$\pm$0.279              & 56.29$\pm$0.408                                   & 0.248$\pm$0.180                                     \\ \bottomrule
 \end{tabular}
-\caption{vgg and resent50 tiny Image net pruning rate 0.5}
+\caption{VGG and ResNet50 Tiny ImageNet with pruning rate 0.5}
 \label{tab:tiny imagenet pruning rate06}
 \end{table}
 
@@ -348,7 +348,7 @@ Here we fine-tuned the pruned solutions while preserving the mask for 10 epochs 
   \item Gradient clip: 0.1
 \end{itemize}
 
-\todo[inline]{All of the following figures would be better on a table}
+%\todo[inline]{All of the following figures would be better on a table}
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
 \begin{table}[H]
