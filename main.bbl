@@ -1,9 +1,16 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{13}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Ballard et~al.(1983)Ballard, Hinton, and Sejnowski]{ballardParallelVisualComputation1983}
+D.~H. Ballard, G.~E. Hinton, and T.~J. Sejnowski.
+\newblock Parallel visual computation.
+\newblock \emph{Nature}, 306\penalty0 (5938):\penalty0 21--26, Nov. 1983.
+\newblock ISSN 1476-4687.
+\newblock \doi{10.1038/306021a0}.
 
 \bibitem[Deng et~al.(2009)Deng, Dong, Socher, Li, Li, and {Fei-Fei}]{dengImageNetLargescaleHierarchical2009}
 J.~Deng, W.~Dong, R.~Socher, L.-J. Li, K.~Li, and L.~{Fei-Fei}.
@@ -47,10 +54,20 @@ W.~Luo, Y.~Li, R.~Urtasun, and R.~Zemel.
 \newblock Understanding the {{Effective Receptive Field}} in {{Deep Convolutional Neural Networks}}.
 \newblock In \emph{Advances in {{Neural Information Processing Systems}}}, volume~29. {Curran Associates, Inc.}, 2016.
 
+\bibitem[Ro and Choi(2021)]{roAutoLRLayerwisePruning2021}
+Y.~Ro and J.~Y. Choi.
+\newblock {{AutoLR}}: {{Layer-wise}} pruning and auto-tuning of learning rates in fine-tuning of deep networks.
+\newblock In \emph{Proceedings of the {{AAAI}} Conference on Artificial Intelligence}, volume~35, pages 2486--2494, 2021.
+
 \bibitem[van~den Oord et~al.(2016)van~den Oord, Dieleman, Zen, Simonyan, Vinyals, Graves, Kalchbrenner, Senior, and Kavukcuoglu]{oordWaveNetGenerativeModel2016}
 A.~van~den Oord, S.~Dieleman, H.~Zen, K.~Simonyan, O.~Vinyals, A.~Graves, N.~Kalchbrenner, A.~Senior, and K.~Kavukcuoglu.
 \newblock {{WaveNet}}: {{A Generative Model}} for {{Raw Audio}}.
 \newblock \emph{arXiv:1609.03499 [cs]}, Sept. 2016.
+
+\bibitem[Yosinski et~al.(2014)Yosinski, Clune, Bengio, and Lipson]{yosinskiHowTransferableAre2014}
+J.~Yosinski, J.~Clune, Y.~Bengio, and H.~Lipson.
+\newblock How transferable are features in deep neural networks?
+\newblock In \emph{Advances in {{Neural Information Processing Systems}}}, volume~27. {Curran Associates, Inc.}, 2014.
 
 \bibitem[Zhou et~al.(2015)Zhou, Khosla, Lapedriza, Oliva, and Torralba]{zhouObjectDetectorsEmerge2015}
 B.~Zhou, A.~Khosla, A.~Lapedriza, A.~Oliva, and A.~Torralba.

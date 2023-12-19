@@ -13,8 +13,7 @@ last convolutional layer for the two architectures.
 
 \subsection{Experimental settings}
 We used a custom implementation of the ResNet50 and VGG models with a modified maxpooling layer after the first
-convolutional layer for manipulating the receptive field. Implementation details are in \Cref{subsec:
-implementation_details}. The dataset are CIFAR10 and Tiny ImageNet. The training hyperparameters are the following:
+convolutional layer for manipulating the receptive field. Implementation details are in \Cref{sebsec:implementation_details}. The dataset are CIFAR10 and Tiny ImageNet. The training hyperparameters are the following:
 \begin{itemize}
   \setlength\itemsep{.0em}
     \item Epochs: 200
@@ -35,12 +34,12 @@ minimum alterations to the rest of the networks leaving all layers with the exac
 maxpooling layer just after the first convolutional layer on both architectures and we changed the kernel size of that
 layer. That is the only difference between the different models on each experiment. For each
 architecture-dataset-receptive field combination we trained 5 models and the result are shown in \ref{sec:rfanda}.
-\subsection{Receptive Field, Accuracy and Loss Landscape}
+\subsection{Receptive Field, Accuracy and Pruning}
 \label{sec:rfanda}
 Here we show the dense accuracy after training the models and its one-shot pruned accuracy. One interesting observation
 is that larger receptive field correlates with lower accuracy but simultaneously its one-shot pruning performances is
 better than those for smaller receptive fields. This behaviour generalises across all the combinations of
-architecture-dataset. In \Cref{subsec:OneShotPruningrates} we show that the current trend in accuracy (for dense and prune version) only
+architecture-dataset. In \Cref{subsec:OneShotPruningRates} we show that the current trend in accuracy (for dense and prune version) only
 arises for sufficiently large pruning rate (>0.8). We also fine-tuned the models to test their real-world application
 capabilities as seen  in \Cref{subsec:Fine_tuning_solutions} but here we only show the pruning rate of 0.9 as means to
 show the one-shot behaviour of these networks in order to understand their one-shot potential.
@@ -53,16 +52,19 @@ each architecture is greater than the size of the image.
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
 \begin{table}[H]
+  \centering
 \begin{tabular}{@{}cccc@{}}
 \toprule
-\multicolumn{4}{c}{\textbf{VGG}}                                                                                                                                                                          \\ \midrule
-\multicolumn{1}{l}{\textbf{Receptive Field}} & \multicolumn{1}{l}{\textbf{Dense Test Accuracy}} & \multicolumn{1}{l}{\textbf{Pruned Test Accuracy}} & \multicolumn{1}{l}{\textbf{Difference in Accuracy}} \\
+\multicolumn{4}{c}{\textbf{VGG Accuracy}}                                                                                                                                                                          \\ \midrule
+\multicolumn{1}{l}{\textbf{Receptive Field}} & \multicolumn{1}{l}{\textbf{Dense}} & \multicolumn{1}{l}{\textbf{Pruned
+(90\%)}} & \multicolumn{1}{l}{\textbf{Difference in Accuracy}} \\
 181                                          & 93.5 $\pm$ 0.11                                  & 10.9 $\pm$2.03                                    & 82.6 $\pm$ 2.02                                     \\
 359                                          & 91.1 $\pm$ 0.23                                  & 32.4 $\pm$ 15.7                                   & 58.7 $\pm$ 15.8                                     \\
 537                                          & 87.8 $\pm$ 0.19                                  & 87.6 $\pm$ 0.30                                   & 0.18 $\pm$ 0.16                                     \\
 715                                          & 85.8 $\pm$ 0.21                                  & 85.8 $\pm$ 0.22                                   & 0.07 $\pm$ 0.04                                     \\ \midrule
-\multicolumn{4}{c}{\textbf{Resnet 50}}                                                                                                                                                                    \\ \midrule
-\multicolumn{1}{l}{\textbf{Receptive Field}} & \multicolumn{1}{l}{\textbf{Dense Test Accuracy}} & \multicolumn{1}{l}{\textbf{Pruned Test Accuracy}} & \multicolumn{1}{l}{\textbf{Difference in Accuracy}} \\
+\multicolumn{4}{c}{\textbf{ResNet 50 Accuracy}}                                                                                                                                                                    \\ \midrule
+\multicolumn{1}{l}{\textbf{Receptive Field}} & \multicolumn{1}{l}{\textbf{Dense}} & \multicolumn{1}{l}{\textbf{Pruned
+(90\%)}} & \multicolumn{1}{l}{\textbf{Difference in Accuracy}} \\
 110                                          & 94.8 $\pm$ 0.29                                  & 56 $\pm$ 20.7                                     & 38.7 $\pm$ 20.5                                     \\
 213                                          & 94.0 $\pm$ 0.16                                  & 91.7 $\pm$ 0.98                                   & 2.25 $\pm$ 0.90                                     \\
 318                                          & 92.2 $\pm$ 0.18                                  & 91.4 $\pm$ 0.45                                   & 0.85 $\pm$ 0.49                                     \\
@@ -79,32 +81,131 @@ diminishes. The pruning rate used is 90\%}
 
 
 \begin{table}[H]
+  \centering
 \begin{tabular}{crrr}\toprule
-\multicolumn{4}{c}{\textbf{VGG}}                                                                                                                                                                          \\ \hline
-\multicolumn{1}{l}{\textbf{Receptive Field}} & \multicolumn{1}{l}{\textbf{Pruned Test Accuracy}} & \multicolumn{1}{l}{\textbf{Dense Test Accuracy}} & \multicolumn{1}{l}{\textbf{Difference in Accuracy}} \\
-181                                          & 0.75 $\pm$0.09                                    & 61.5 $\pm$ 0.33                                  & 60.8 $\pm$ 0.32                                     \\
-359                                          & 0.63 $\pm$ 0.17                                   & 53.2 $\pm$ 0.20                                  & 52.6 $\pm$ 0.36                                     \\
-537                                          & 16.7 $\pm$ 7.50                                   & 41.0 $\pm$ 1.91                                  & 24.3 $\pm$ 5.81                                     \\
-715                                          & 21.8 $\pm$ 6.57                                   & 38.5 $\pm$ 1.69                                  & 16.7 $\pm$ 7.21                                     \\ \hline
-\multicolumn{4}{c}{\textbf{Resnet 50}}                                                                                                                                                                    \\ \hline
-\multicolumn{1}{l}{\textbf{Receptive Field}} & \multicolumn{1}{l}{\textbf{Pruned Test Accuracy}} & \multicolumn{1}{l}{\textbf{Dense Test Accuracy}} & \multicolumn{1}{l}{\textbf{Difference in Accuracy}} \\
-213                                          & 5.91 $\pm$ 0.89                                   & 61.8 $\pm$ 0.40                                  & 55.9 $\pm$ 0.99                                     \\
-318                                          & 8.56 $\pm$ 2.66                                   & 59.1 $\pm$ 0.36                                  & 50.5 $\pm$ 2.55                                     \\
-423                                          & 21.4 $\pm$ 2.87                                   & 56.5 $\pm$ 0.27
-                                             & 35.0 $\pm$ 2.99                                     \\ \hline\\
+  \multicolumn{4}{c}{\textbf{VGG Accuracy}}                                                                                                                                                                          \\ \hline \multicolumn{1}{l}{\textbf{Receptive Field}}& \multicolumn{1}{l}{\textbf{Dense}}  & \multicolumn{1}{l}{\textbf{Pruned}}  & \multicolumn{1}{l}{\textbf{Difference in Accuracy}} \\
+181& 61.5 $\pm$ 0.33& 0.75 $\pm$0.09 & 60.8 $\pm$ 0.32\\
+359& 53.2 $\pm$ 0.20& 0.63 $\pm$ 0.17& 52.6 $\pm$ 0.36\\
+537& 41.0 $\pm$ 1.91& 16.7 $\pm$ 7.50& 24.3 $\pm$ 5.81\\
+715& 38.5 $\pm$ 1.69& 21.8 $\pm$ 6.57& 16.7 $\pm$ 7.21\\ \hline
+\multicolumn{4}{c}{\textbf{ResNet 50 Accuracy}}                                                                                                                                                                    \\ \hline
+\multicolumn{1}{l}{\textbf{Receptive Field}}& \multicolumn{1}{l}{\textbf{Dense}} & \multicolumn{1}{l}{\textbf{Pruned}}  & \multicolumn{1}{l}{\textbf{Difference in Accuracy}} \\
+213                                         & 61.8 $\pm$ 0.40                                  & 5.91 $\pm$ 0.89                                    & 55.9 $\pm$ 0.99                                     \\
+318                                         & 59.1 $\pm$ 0.36                                  & 8.56 $\pm$ 2.66                                    & 50.5 $\pm$ 2.55                                     \\
+423                                         & 56.5 $\pm$ 0.27                                  & 21.4 $\pm$ 2.87                                     & 35.0 $\pm$ 2.99                                     \\ \hline\\
 \end{tabular}\\
 \caption{ \textbf{Tiny ImageNet Results:} Here are summarised the results for the experiments performed in Tiny ImageNet.
 Similarly to CIFAR10, the trend of diminishing dense accuracy and gap between dense and pruned accuracy as we increase
 the receptive field is consistent in the two architectures.
-The pruning rate is 90\% }
+The pruning rate is 90\%  excluding the first convolutional layer and the linear layer}
 \label{tab:tiny_imagenet_results}
 \end{table}
+
+\subsection{Fine-tuning Pruned Solutions}
+\label{subsec:Fine_tuning_solutions}
+Here we fine-tuned the pruned solutions while preserving the mask for 10 epochs with the following hyper-parameters
+\begin{itemize}
+  \item Initial Learning Rate: 0.0001,
+  \item Weight Decay:5e-4
+  \item Momentum:0,9
+  \item Gradient clip: 0.1
+\end{itemize}
+
+%\todo[inline]{All of the following figures would be better on a table}
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[H]
+  \centering
+\begin{tabular}{@{}cccc@{}}
+\toprule
+\multicolumn{4}{c}{\textbf{VGG  Accuracy}}                                                                                                                                  \\ \midrule
+\textbf{Receptive Field} & \textbf{Dense} & \multicolumn{1}{l}{\textbf{Pruned (90\%)}} & \multicolumn{1}{l}{\textbf{Difference In Accuracy}} \\ \midrule
+181                      & 93.52$\pm$0.115              & 91.42$\pm$2.026                                   & 2.106$\pm$2.111                                     \\
+359                      & 91.15$\pm$0.232              & 90.81$\pm$0.293                                   & 0.348$\pm$0.366                                     \\
+537                      & 87.88$\pm$0.193              & 87.85$\pm$0.223                                   & 0.032$\pm$0.070                                     \\
+715                      & 85.88$\pm$0.217              & 85.78$\pm$0.286                                   & 0.096$\pm$0.140                                     \\ \midrule
+\multicolumn{4}{c}{\textbf{ResNet50 Accuracy}}                                                                                                                             \\ \midrule
+\textbf{Receptive Field} & \textbf{Dense Test Accuracy} & \textbf{Pruned (90\%)}                     & \textbf{Difference In Accuracy}                     \\
+110                      & 94.69$\pm$0.213              & 90.86$\pm$0.701                                   & 3.830$\pm$0.795                                     \\
+213                      & 94.03$\pm$0.236              & 93.55$\pm$0.211                                   & 0.477$\pm$0.197                                     \\
+318                      & 92.22$\pm$0.244              & 92.03$\pm$0.200                                   & 0.190$\pm$0.053                                     \\
+423                      & 90.23$\pm$0.169              & 90.23$\pm$0.147                                   &
+-0.007$\pm$0.087                                    \\ \bottomrule\\
+\end{tabular}
+\caption{VGG and ResNet50 on CIFAR10 with fine tuning and pruning rate 0.9}
+\label{tab:cifar10 fine tuning pruning rate 09}
+\end{table}
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[H]
+  \centering
+\begin{tabular}{@{}cccc@{}}
+\toprule
+\multicolumn{4}{c}{\textbf{VGG}}                                                                                                                                  \\ \midrule
+\textbf{Receptive Field} & \textbf{Dense Test Accuracy} & \multicolumn{1}{l}{\textbf{Pruned (90\%)}} & \multicolumn{1}{l}{\textbf{Difference In Accuracy}} \\ \midrule
+181                      & 61.58$\pm$0.333              & 30.21$\pm$2.595                                   & 31.37$\pm$2.534                                     \\
+359                      & 53.25$\pm$0.207              & 3.558$\pm$2.027                                   & 49.69$\pm$2.188                                     \\
+537                      & 41.05$\pm$1.917              & 38.21$\pm$2.699                                   & 2.842$\pm$0.884                                     \\
+715                      & 38.57$\pm$1.691              & 36.45$\pm$1.549                                   & 2.126$\pm$0.762                                     \\ \midrule
+\multicolumn{4}{c}{\textbf{ResNet50}}                                                                                                                             \\ \midrule
+\textbf{Receptive Field} & \textbf{Dense Test Accuracy} & \textbf{Pruned (90\%)}                     & \textbf{Difference In Accuracy}                     \\
+213                      & 61.83$\pm$0.401              & 44.56$\pm$1.205                                   & 17.27$\pm$1.346                                     \\
+318                      & 59.10$\pm$0.368              & 44.28$\pm$0.648                                   & 14.82$\pm$0.633                                     \\
+423                      & 56.53$\pm$0.279              & 46.16$\pm$0.716                                   &
+10.37$\pm$0.577                                     \\ \bottomrule \\
+\end{tabular}
+\caption{VGG and ReseNet50 on Tiny ImageNet with fine tuning and pruning rate of 0.9}
+\label{tab:cifar10 fine tuning pruning rate 09}
+\end{table}
+
+\textbf{ Tiny ImageNet for 100 Epochs}
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[H]
+  \centering
+\begin{tabular}{@{}cccc@{}}
+\toprule
+\multicolumn{4}{c}{\textbf{VGG  Test Accuracy}}                                                                    \\ \midrule
+\textbf{Receptive Field} & \textbf{Dense}  & \textbf{Pruned (90\%)} & \multicolumn{1}{l}{\textbf{Difference In Accuracy}} \\ \midrule
+181                      & 61.58$\pm$0.333 & 33.93$\pm$0.320 & 27.66$\pm$0.521                                     \\
+359                      & 53.25$\pm$0.207 & 29.73$\pm$16.15 & 23.52$\pm$16.23                                     \\
+537                      & 41.05$\pm$1.917 & 37.50$\pm$1.916 & 3.554$\pm$0.164                                     \\
+715                      & 38.57$\pm$1.691 & 35.50$\pm$1.812 & 3.078$\pm$0.453                                     \\ \midrule
+\multicolumn{4}{c}{\textbf{ResNet50 Test Accuracy}}                                                                \\ \midrule
+\textbf{Receptive Field} & \textbf{Dense}  & \textbf{Pruned (90\%)} & \textbf{Difference In Accuracy}                     \\
+\midrule
+213                      & 61.83$\pm$0.401 & 50.21$\pm$0.428 & 11.62$\pm$0.487                                     \\
+318                      & 59.10$\pm$0.368 & 49.83$\pm$0.583 & 9.274$\pm$0.413                                     \\
+423                      & 56.53$\pm$0.279 & 49.43$\pm$0.403 & 7.106$\pm$0.361                                     \\
+\bottomrule \\
+\end{tabular}
+\caption{VGG and ReseNet50 on Tiny ImageNet with fine tuning for 100 epochs and pruning rate of 0.9}
+\label{tab:tiny imagenet fine tuning pruning rate 09}
+\end{table}
+
+
+
+
+\subsection{Loss Landscape and Receptive Field}
 Why do models with large receptive field behave in this manner? One hypothesis is that the loss landscape changes in
 such a way that makes more difficult for SGD to found a better solution. In \Cref{fig:hessian_vgg_cifar10,fig:hessian_resnet50_cifar10} we show the 90 largest eigen values for both models on CIFAR10, before and after training. As
 we can see, at the beginning of training the Hessian spectra of models with alter receptive field are wider and
 encompass larger eigen values. This means that the landscape of that models has much more steeper directions of descent
 (and ascent) making the landscape more chaotic  and difficult to traverse than for smaller receptive fields (maybe search
 a citation that corroborates this?).
+
+\todo[inline]{Talk about the training trajectory in \Cref{fig:training_trajectories}, and mention that the figures in
+\Cref{fig:hessian_vgg_cifar10,fig:hessian_resnet50_cifar10} explain such behaviour. In \Cref{fig:images-resnet50_CIFAR10_training-png}
+I trained for double the epochs trying to show that even with more training the
+larger receptive field cannot match the smaller receptive field. The bump seen arround 200 epochs is due tu the learning
+rate schedule, which is a cosine schedule with Tmax=200, right now im training a model with Tmax=400 to see if it that
+claim is still valid. All the accuracies seen throughtout the document correspond to the best model while trainig
+e.g. the bump}
+
+
+
 \begin{figure}[h]
  \centering
      \begin{subfigure}[b]{0.45\textwidth}
@@ -123,6 +224,10 @@ a citation that corroborates this?).
      like $\lambda$ and $P(\lambda)$. Larger font} }
     \label{fig:hessian_vgg_cifar10}
 \end{figure}
+
+
+
+
 \begin{figure}[h]
  \centering
      \begin{subfigure}[b]{0.45\textwidth}
@@ -140,6 +245,24 @@ a citation that corroborates this?).
     \label{fig:hessian_resnet50_cifar10}
 \end{figure}
 
+\begin{figure}[H]
+  \begin{subfigure}[b]{0.45\textwidth}
+      \centering
+      \includegraphics[width=7cm]{images/resnet50_CIFAR10_training.png}
+      \caption{ResNet50 training for different Receptive fields on CIFAR10}
+      \label{fig:images-resnet50_CIFAR10_training-png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+      \centering
+      \includegraphics[width=7cm]{images/resnet50_Tiny_imagenet_training.png}
+      \caption{ResNet50 training for different Receptive fields on Tiny ImageNet}
+      \label{fig:images-resnet50_Tiny_imagenet_training-png}
+    \end{subfigure}
+     \caption{Training of ResNet50 on CIFAR10 and Tiny ImageNet}
+     \label{fig:training_trajectories}
+
+\end{figure}
 But how does this affect the features or representations that these models learn? Next we show the similarity of the
 internal representation two different seeds of the ReseNet50 model on CIFAR10., It is observed that the introduction of
 larger receptive fields results in a divergence of representations within the deepest layers. This phenomenon can be
@@ -148,13 +271,17 @@ representations in deeper layers for individual seeds exhibit dissimilarity, as 
 basins, differing not only from the majority of the network but also from corresponding layers in other seeds. The representation
  similarly was calculated using the first 1000 images of the test set and we use the Centred linear Kernel Alignment
  \citep{kornblithSimilarityNeuralNetwork2019} as similarity measure.
+
+
+
+
 \begin{figure}[H]
         \centering
         \begin{subfigure}[b]{0.475\textwidth}
             \centering
             \includegraphics[width=0.7\textwidth]{images/resnet50_level1_similarity_cifar10.png}
             \caption[Network1]%
-            {{\small Receptive field 110}}    
+            {{\small Receptive Field 110}}    
             \label{fig:similarity_lvl1}
         \end{subfigure}
         \hfill
@@ -162,7 +289,7 @@ basins, differing not only from the majority of the network but also from corres
             \centering 
             \includegraphics[width=0.7\textwidth]{images/resnet50_level2_similarity_cifar10.png}
             \caption[Network2]%
-            {{\small Receptive field 213}}    
+            {{\small Receptive Field 213}}    
             \label{fig:similarity_lvl2}
         \end{subfigure}
 
@@ -172,7 +299,7 @@ basins, differing not only from the majority of the network but also from corres
             \centering 
             \includegraphics[width=0.7\textwidth]{images/resnet50_level3_similarity_cifar10.png}
             \caption[]%
-            {{\small Receptive field 318}}    
+            {{\small Receptive Field 318}}    
             \label{fig:similarity_lvl3}
         \end{subfigure}
         \hfill
@@ -180,141 +307,225 @@ basins, differing not only from the majority of the network but also from corres
             \centering 
             \includegraphics[width=0.7\textwidth]{images/resnet50_level4_similarity_cifar10.png}
             \caption[]%
-            {{\small Receptive field 423}}    
+            {{\small Receptive Field 423}}    
             \label{fig:similarity_lvl4}
         \end{subfigure}
-        \caption[ The average and standard deviation of critical parameters ]
-        {\small Representation similarly of all layers in ReseNet50 for different receptive fields. The red lines
+        \caption[Representation similarity]
+        {\small Representation similarly for all convolutional layers in ReseNet50 for different receptive fields. The red lines
         represent the middle layer of the model (25$^{\textrm{th}}$ layer). The largest receptive field (bottom right)
       has high degree of dissimilarity between its deeper layer representations when compared with the smallest
     receptive field (top left)}
         \label{fig:similarity_resenet50}
     \end{figure}
 
-
-
-\subsection{Receptive Field and Pixel Importance}\label{subsec:Receptive_field_and_pixel_importance}
-In this section we show the projection of gradient of the last convolutional network into an input space of 64x64. We
-show that for larger receptive fields the ``importance pattern'' does not change much but the ``importance'' decreases
-from one receptive field to another. This means that even if the model sees similarity for all receptive fields, for
-larger receptive fields each pixel is less important. We call importance here to the magnitude of the projected
-gradient on the input space from the last convolutional layer of the  randomly initialised model. We place a would be gradient with 1 in the center of all channels
-of the last convolutional layer and calculate the gradient with respect to a random input with 64x64 dimensions, we take
-the absolute value of that projected gradient. Then for each receptive field we average 50 of such projections and also
-take the average of their maximum value. In \Cref{fig:gradient_projection_resenet50,fig:gradient_projection_vgg} we can see the importance pattern for ReseNet50 and
-VGG. In \Cref{fig:gradient_projection_vgg} the check board pattern appears due an odd-sized kernel is applied with an
-even stride causing what \cite{kimDeadPixelTest2023} call \textit{pixel sensitivity imbalance}.
-In \Cref{tab:vgg_grad_projection,tab:resnet50_grad_projection} can be seen the average of the maximum importance value for each receptive
-field. As we can see the importance for each pixel is decreased as we increase the receptive field. This might explain
-why having a larger receptive field could hinder performance, since we are paying attention to the same areas of the
-image but not the same value of attention.
-
-\begin{figure}[H]
-        \centering
-        \begin{subfigure}[b]{0.475\textwidth}
-            \centering
-            \includegraphics[width=0.7\textwidth]{images/gradientProjection_resnet_50_110.png}
-            \caption[Network1]%
-            {{\small Receptive field 110}}    
-            \label{fig:similarity_lvl1}
-        \end{subfigure}
-        \hfill
-        \begin{subfigure}[b]{0.475\textwidth}  
-            \centering 
-            \includegraphics[width=0.7\textwidth]{images/gradientProjection_resnet_50_213.png}
-            \caption[Network2]%
-            {{\small Receptive field 213}}    
-            \label{fig:similarity_lvl2}
-        \end{subfigure}
-
-        \vskip\baselineskip
-
-        \begin{subfigure}[b]{0.475\textwidth}   
-            \centering 
-            \includegraphics[width=0.7\textwidth]{images/gradientProjection_resnet_50_318.png}
-            \caption[]%
-            {{\small Receptive field 318}}    
-            \label{fig:similarity_lvl3}
-        \end{subfigure}
-        \hfill
-        \begin{subfigure}[b]{0.475\textwidth}   
-            \centering 
-            \includegraphics[width=0.7\textwidth]{images/gradientProjection_resnet_50_423.png}
-            \caption[]%
-            {{\small Receptive field 423}}    
-            \label{fig:similarity_lvl4}
-        \end{subfigure}
-        \caption{\small Projection of the gradient into an input space of 64x64 for different levels of receptive field
-        of ReseNet50}
-        \label{fig:gradient_projection_resenet50}
-    \end{figure}
-\begin{figure}[H]
-        \centering
-        \begin{subfigure}[b]{0.475\textwidth}
-            \centering
-            \includegraphics[width=0.7\textwidth]{images/gradientProjection_vgg19_1.png}
-            \caption[Network1]%
-            {{\small Receptive Field 181}}    
-            \label{fig:grad_projection_vgg_lvl1}
-        \end{subfigure}
-        \hfill
-        \begin{subfigure}[b]{0.475\textwidth}  
-            \centering 
-            \includegraphics[width=0.7\textwidth]{images/gradientProjection_vgg19_2.png}
-            \caption[Network2]%
-            {{\small Receptive Field 359}}    
-            \label{fig:grad_projection_vgg_lvl2}
-        \end{subfigure}
-
-        \vskip\baselineskip
-
-        \begin{subfigure}[b]{0.475\textwidth}   
-            \centering 
-            \includegraphics[width=0.7\textwidth]{images/gradientProjection_vgg19_3.png}
-            \caption[]%
-            {{\small Receptive Field 537}}    
-            \label{fig:grad_projection_vgg_lvl3}
-        \end{subfigure}
-        \hfill
-        \begin{subfigure}[b]{0.475\textwidth}   
-            \centering 
-            \includegraphics[width=0.7\textwidth]{images/gradientProjection_vgg19_4.png}
-            \caption[]%
-            {{\small Receptive Field 715}}    
-            \label{fig:grad_projection_vgg_lvl4}
-        \end{subfigure}
-        \caption{\small Projection of the gradient into an input space of 64x64 for different levels of receptive field
-        of ReseNet50}
-        \label{fig:gradient_projection_vgg}
-    \end{figure}
+    In \Cref{fig:similarity_resenet50} we can see that the similarity between layers decreases as we increase the receptive
+    field. This is consistent with our findings that the loss landscape for large receptive fields are more ``rugged''
+    (see \Cref{fig:hessian_resnet50_cifar10,fig:hessian_vgg_cifar10})
+    meaning that deeper layers, which learn specific features for the task \citep{yosinskiHowTransferableAre2014,
+    roAutoLRLayerwisePruning2021}, converge to a more varied set of representations thus the
+    increase in dissimilarity. The shallow layers in the other hand, the representations between solutions converge to a
+    more uniform set of representations, hence their similarity. This is congruent with the notion that shallow layer
+    learn ``general'' features that are beneficial for transfer learning \citep{roAutoLRLayerwisePruning2021}.
+    Conversely, smaller receptive fields have a smoother loss landscape and in consequence, even the deeper, specific layers
+    in the network converge to similar representations. Another explanation is that due to the size of the receptive
+    field, the network's ability to learn nuanced features (those that normally would be learned in deeper layers) is
+    impaired, thus affecting its performance and similarities.
 
 
 
+\subsection{Large Receptive Field for Tiny ImageNet}
+\label{subsec:LargeRFTI}
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
 \begin{table}[H]
-\begin{tabular}{@{}cc@{}}
-\toprule
-\textbf{Receptive Field} & \textbf{Maximum Projected Gradient Value} \\ \midrule
-181                      & 1.24e-05 $\pm$ 2.14e-06                   \\
-359                      & 2.48e-06 $\pm$ 4.88e-07                   \\
-537                      & 1.32e-07 $\pm$ 2.48e-08                   \\
-715                      & 7.26e-08 $\pm$ 1.45e-08                   \\ \bottomrule
+  \centering
+\begin{tabular}{@{}cccc@{}}\toprule
+\multicolumn{4}{c}{\textbf{ResNet50 Test Accuracy}}                                            \\ \midrule
+\textbf{Receptive Field} & \textbf{Dense}  & \textbf{Pruned (90\% One Shot)} & \textbf{Difference In Accuracy} \\ \midrule
+1415                     & 32.00$\pm$0.192 & 32.00$\pm$0.192 & 0.000$\pm$0.000                 \\
+1920                     & 29.28$\pm$0.627 & 29.28$\pm$0.627 & 0.000$\pm$0.000                 \\
+3100                     & 22.84$\pm$0.370 & 22.84$\pm$0.370 & 0.000$\pm$0.000                 \\ \bottomrule
 \end{tabular}
-\caption{VGG gradient projection on a 64X64 input image}
-\label{tab:vgg_grad_projection}
-\end{table}
-\begin{table}[H]
-\begin{tabular}{@{}cc@{}}
-\toprule
-\textbf{Receptive Field} & \textbf{Maximum Projected Gradient Value} \\ \midrule
-110                      & 0.322 $\pm$ 0.122                         \\
-213                      & 0.179 $\pm$ 0.079                         \\
-318                      & 0.111 $\pm$ 0.039                         \\
-423                      & 0.064 $\pm$ 0.022                         \\ \bottomrule
-\end{tabular}
-\caption{Maximum projected gradient for ReseNet50}
-\label{tab:resnet50_grad_projection}
+\caption{ReseNet50 with large Receptive Field on Tiny ImageNet  with pruning rate of 0.9}
+\label{tab:tiny imagenet largeRF one shot pruning rate 09}
 \end{table}
 
+\subsection{Large Receptive Field for CIFAR10}
+\label{subsec:LargeRFCF10}
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+
+\begin{table}[H]
+  \centering
+\begin{tabular}{@{}cccc@{}}
+\toprule
+\multicolumn{4}{c}{\textbf{ResNet50 Accuracy}}                                                                                         \\ \midrule
+\textbf{Receptive Field} & \textbf{Dense}  & \multicolumn{1}{l}{\textbf{Pruned (90\% One Shot)}} & \multicolumn{1}{l}{\textbf{Difference in Accuracy}} \\ \midrule
+1415                     & 72.87$\pm$0.787 & 72.87$\pm$0.787                     & 0.000$\pm$0.000                                     \\
+1920                     & 53.37$\pm$1.293 & 53.37$\pm$1.293                     & 0.000$\pm$0.000                                     \\
+3100                     & 50.11$\pm$0.256 & 50.11$\pm$0.256                     & 0.000$\pm$0.000
+\\ \bottomrule \\
+\end{tabular}
+\caption{ReseNet50 with large receptive field in CIFAR10}
+\label{tab:cifar10  largeRF one shot pruning rate 09}
+\end{table}
+
+
+
+\subsection{Width and Depth cannot Recover Information}
+
+One questions is : Is the information from the receptive field not recoverable by the width or depth of the model? To
+answer this we modified the width of ResNet50  by 2x and 3x times and found that despite improving performance marginally the width
+of the model cannot retrieve all information lost by the large receptive field, thus diverging from the observation that
+accurate information can be extracted by coarsely tuned units \citep{ballardParallelVisualComputation1983}.
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{multirow}
+\begin{table}[H]
+  \centering
+\begin{tabular}{@{}cccc@{}}
+\toprule
+\textbf{Receptive Field} & \textbf{Width} & \textbf{Test Accuracy} & \multicolumn{1}{l}{\textbf{Original Test
+Accuracy (Width=$\times1$)}} \\ \midrule
+\multirow{2}{}{3100}    & $\times2$             & 26.33                        & \multirow{2}{}{22.84$\pm$0.370}                    \\
+                         & $\times3$             & 26.04                        
+                         \\ \bottomrule\\ %\cmidrule(lr){2-3}
+\end{tabular}
+\caption{ReseNet50 with 2X and 3X width with receptive field of 3100 Tiny ImageNet }
+\label{tab:cifar10  largeRF one shot pruning rate 09}
+\end{table}
+\todo[inline]{Here I'm planning to include results of a ResNet24 model that has all the same components as ReseNet50 but
+it simply is more shallow. Also I'm running experiments on width for two more receptive fields, 318 and 1415. Also I
+haven implementation/showed the information measure we talked about with Netta but as Netta suggested it can be simply
+$\frac{\text{Difference in Accuracy}{\text{Dense Accuracy}}}$}
+
+% PIXEL IMPORTANCE SECTION 
+%
+%\subsection{Receptive Field and Pixel Importance}\label{subsec:Receptive_field_and_pixel_importance}
+%In this section we show the projection of gradient of the last convolutional network into an input space of 64x64. We
+%show that for larger receptive fields the ``importance pattern'' does not change much but the ``importance'' decreases
+%from one receptive field to another. This means that even if the model sees similarity for all receptive fields, for
+%larger receptive fields each pixel is less important. We call importance here to the magnitude of the projected
+%gradient on the input space from the last convolutional layer of the  randomly initialised model. We place a would be gradient with 1 in the center of all channels
+%of the last convolutional layer and calculate the gradient with respect to a random input with 64x64 dimensions, we take
+%the absolute value of that projected gradient. Then for each receptive field we average 50 of such projections and also
+%take the average of their maximum value. In \Cref{fig:gradient_projection_resenet50,fig:gradient_projection_vgg} we can see the importance pattern for ReseNet50 and
+%VGG. In \Cref{fig:gradient_projection_vgg} the check board pattern appears due an odd-sized kernel is applied with an
+%even stride causing what \cite{kimDeadPixelTest2023} call \textit{pixel sensitivity imbalance}.
+%In \Cref{tab:vgg_grad_projection,tab:resnet50_grad_projection} can be seen the average of the maximum importance value for each receptive
+%field. As we can see the importance for each pixel is decreased as we increase the receptive field. This might explain
+%why having a larger receptive field could hinder performance, since we are paying attention to the same areas of the
+%image but not the same value of attention.
+%
+%
+%\begin{figure}[H]
+%        \centering
+%        \begin{subfigure}[b]{0.475\textwidth}
+%            \centering
+%            \includegraphics[width=0.7\textwidth]{images/gradientProjection_resnet_50_110.png}
+%            \caption[Network1]%
+%            {{\small Receptive field 110}}    
+%            \label{fig:similarity_lvl1}
+%        \end{subfigure}
+%        \hfill
+%        \begin{subfigure}[b]{0.475\textwidth}  
+%            \centering 
+%            \includegraphics[width=0.7\textwidth]{images/gradientProjection_resnet_50_213.png}
+%            \caption[Network2]%
+%            {{\small Receptive field 213}}    
+%            \label{fig:similarity_lvl2}
+%        \end{subfigure}
+%
+%        \vskip\baselineskip
+%
+%        \begin{subfigure}[b]{0.475\textwidth}   
+%            \centering 
+%            \includegraphics[width=0.7\textwidth]{images/gradientProjection_resnet_50_318.png}
+%            \caption[]%
+%            {{\small Receptive field 318}}    
+%            \label{fig:similarity_lvl3}
+%        \end{subfigure}
+%        \hfill
+%        \begin{subfigure}[b]{0.475\textwidth}   
+%            \centering 
+%            \includegraphics[width=0.7\textwidth]{images/gradientProjection_resnet_50_423.png}
+%            \caption[]%
+%            {{\small Receptive field 423}}    
+%            \label{fig:similarity_lvl4}
+%        \end{subfigure}
+%        \caption{\small Projection of the gradient into an input space of 64x64 for different levels of receptive field
+%        of ReseNet50}
+%        \label{fig:gradient_projection_resenet50}
+%    \end{figure}
+%\begin{figure}[H]
+%        \centering
+%        \begin{subfigure}[b]{0.475\textwidth}
+%            \centering
+%            \includegraphics[width=0.7\textwidth]{images/gradientProjection_vgg19_1.png}
+%            \caption[Network1]%
+%            {{\small Receptive Field 181}}    
+%            \label{fig:grad_projection_vgg_lvl1}
+%        \end{subfigure}
+%        \hfill
+%        \begin{subfigure}[b]{0.475\textwidth}  
+%            \centering 
+%            \includegraphics[width=0.7\textwidth]{images/gradientProjection_vgg19_2.png}
+%            \caption[Network2]%
+%            {{\small Receptive Field 359}}    
+%            \label{fig:grad_projection_vgg_lvl2}
+%        \end{subfigure}
+%
+%        \vskip\baselineskip
+%
+%        \begin{subfigure}[b]{0.475\textwidth}   
+%            \centering 
+%            \includegraphics[width=0.7\textwidth]{images/gradientProjection_vgg19_3.png}
+%            \caption[]%
+%            {{\small Receptive Field 537}}    
+%            \label{fig:grad_projection_vgg_lvl3}
+%        \end{subfigure}
+%        \hfill
+%        \begin{subfigure}[b]{0.475\textwidth}   
+%            \centering 
+%            \includegraphics[width=0.7\textwidth]{images/gradientProjection_vgg19_4.png}
+%            \caption[]%
+%            {{\small Receptive Field 715}}    
+%            \label{fig:grad_projection_vgg_lvl4}
+%        \end{subfigure}
+%        \caption{\small Projection of the gradient into an input space of 64x64 for different levels of receptive field
+%        of ReseNet50}
+%        \label{fig:gradient_projection_vgg}
+%    \end{figure}
+%
+%
+%
+%\begin{table}[H]
+%\begin{tabular}{@{}cc@{}}
+%\toprule
+%\textbf{Receptive Field} & \textbf{Maximum Projected Gradient Value} \\ \midrule
+%181                      & 1.24e-05 $\pm$ 2.14e-06                   \\
+%359                      & 2.48e-06 $\pm$ 4.88e-07                   \\
+%537                      & 1.32e-07 $\pm$ 2.48e-08                   \\
+%715                      & 7.26e-08 $\pm$ 1.45e-08                   \\ \bottomrule
+%\end{tabular}
+%\caption{VGG gradient projection on a 64X64 input image}
+%\label{tab:vgg_grad_projection}
+%\end{table}
+%\begin{table}[H]
+%\begin{tabular}{@{}cc@{}}
+%\toprule
+%\textbf{Receptive Field} & \textbf{Maximum Projected Gradient Value} \\ \midrule
+%110                      & 0.322 $\pm$ 0.122                         \\
+%213                      & 0.179 $\pm$ 0.079                         \\
+%318                      & 0.111 $\pm$ 0.039                         \\
+%423                      & 0.064 $\pm$ 0.022                         \\ \bottomrule
+%\end{tabular}
+%\caption{Maximum projected gradient for ReseNet50}
+%\label{tab:resnet50_grad_projection}
+%\end{table}
+%
 %
 %\subsection{}
 %

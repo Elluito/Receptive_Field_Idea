@@ -34,9 +34,20 @@
 \usepackage{graphicx}
 \usepackage{todonotes}
 \usepackage{float}
+\usepackage{multirow}
 
+\newcommand{\beginsupplement}{%
+        \setcounter{table}{0}
+        \renewcommand{\thetable}{S\arabic{table}}%
+        \setcounter{figure}{0}
+        \renewcommand{\thefigure}{S\arabic{figure}}%
+        \setcounter{section}{0}
+        \renewcommand{\thesection}{\Roman{section}}%
+        \setcounter{subsection}{0}
+        \renewcommand{\thesubsection}{\Roman{section}.\arabic{subsection}}%
 
-
+      }
+     
 \title{Receptive Field and Neural Networks Representations}
 
 
@@ -93,7 +104,6 @@
 
 \section{Introduction}
 \input{00-introduction.tex}
-
 \section{Related Work}
 \input{01-related_works.tex}
 \section{Experimental results}
@@ -105,11 +115,13 @@
 
  In this work, we showed how the receptive field affects the loss landscape of neural networks along with its representations and its behaviour on the input image.
 It is important to note that there are other ways to manipulate the receptive field such as changing the kernel size of the
-convolutional networks,stride, and dilation of the convolutional networks. In this work, we wanted to have the minimum
+convolutional networks,stride, and dilation of the convolutional networks. In this work, used the minimum
 intervention that would not modify the number of weights of the models as we manipulated the receptive field of the
-models. Additionally, in our experiments, as we changed the receptive field, also the size of the feature maps was
-altered. Future work will concentrate on testing other ways to manipulate the receptive field to test the robustness of
-the findings in this work.
+models. Additionally, as we changed the receptive field of the models we changed the  size of internal representations,
+which can greatly affect the behaviour of the models. Future work will concentrate on testing other ways to manipulate
+the receptive field, such as dilation of the maxpooling layer, in addition to using padding to maintain constant the
+size
+of internal representations across receptive fields to test the robustness of the findings in this work.
 
 
 
@@ -148,7 +160,15 @@ the findings in this work.
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
   \bibliography{references.bib}
-  
-\section*{Supplementary Material}
+
+
+
+
+\beginsupplement
+\section{Supplementary Material}
 \input{09-supplementary_material.tex}
+
+
+
+
   \end{document}
