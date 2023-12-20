@@ -374,9 +374,9 @@ basins, differing not only from the majority of the network but also from corres
 
 \subsection{Width and Depth cannot Recover Information}
 
-One questions is : Is the information from the receptive field not recoverable by the width or depth of the model? To
-answer this we modified the width of ResNet50  by 2x and 3x times and found that despite improving performance marginally the width
-of the model cannot retrieve all information lost by the large receptive field, thus diverging from the observation that
+One question is : Is the information from the receptive field not recoverable by the width or depth of the model? To
+answer this, we modified the width of ResNet50 by 2x and 3x times and found that despite the marginal improvement in performance, the width
+of the model cannot retrieve all the information lost by the large receptive field, thus diverging from the observation that
 accurate information can be extracted by coarsely tuned units \citep{ballardParallelVisualComputation1983}.
 
 
@@ -389,17 +389,14 @@ accurate information can be extracted by coarsely tuned units \citep{ballardPara
 \toprule
 \textbf{Receptive Field} & \textbf{Width} & \textbf{Test Accuracy} & \multicolumn{1}{l}{\textbf{Original Test
 Accuracy (Width=$\times1$)}} \\ \midrule
-\multirow{2}{}{3100}    & $\times2$             & 26.33                        & \multirow{2}{}{22.84$\pm$0.370}                    \\
+\multirow{2}{0}{3100}    & $\times2$             & 26.33                        & \multirow{2}{0}{22.84$\pm$0.370}                    \\
                          & $\times3$             & 26.04                        
                          \\ \bottomrule\\ %\cmidrule(lr){2-3}
 \end{tabular}
 \caption{ReseNet50 with 2X and 3X width with receptive field of 3100 Tiny ImageNet }
 \label{tab:cifar10  largeRF one shot pruning rate 09}
 \end{table}
-\todo[inline]{Here I'm planning to include results of a ResNet24 model that has all the same components as ReseNet50 but
-it simply is more shallow. Also I'm running experiments on width for two more receptive fields, 318 and 1415. Also I
-haven implementation/showed the information measure we talked about with Netta but as Netta suggested it can be simply
-$\frac{\text{Difference in Accuracy}{\text{Dense Accuracy}}}$}
+\todo[inline]{Here I'm planning to include results of a ResNet24 model that has all the same components as ReseNet50 but it simply is more shallow. Also, I am running experiments on width for two more receptive fields, 318 and 1415. Also, I have not implemented / shown the information measure we talked about with Netta, but, as Netta suggested, it can simply be $\frac{\text{Difference in Accuracy}}{\text{Dense Accuracy}}$}
 
 % PIXEL IMPORTANCE SECTION 
 %
