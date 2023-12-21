@@ -189,6 +189,7 @@ Here we fine-tuned the pruned solutions while preserving the mask for 10 epochs 
 
 
 \subsection{Loss Landscape and Receptive Field}
+
 Why do models with large receptive field behave in this manner? One hypothesis is that the loss landscape changes in
 such a way that makes more difficult for SGD to found a better solution. In \Cref{fig:hessian_vgg_cifar10,fig:hessian_resnet50_cifar10} we show the 90 largest eigen values for both models on CIFAR10, before and after training. As
 we can see, at the beginning of training the Hessian spectra of models with alter receptive field are wider and
@@ -206,7 +207,7 @@ e.g. the bump}
 
 
 
-\begin{figure}[h]
+\begin{figure}[!htp]
  \centering
      \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=7cm]{images/Hessian_spectre_vgg19_init_cifar10.png}
@@ -224,11 +225,7 @@ e.g. the bump}
      like $\lambda$ and $P(\lambda)$. Larger font} }
     \label{fig:hessian_vgg_cifar10}
 \end{figure}
-
-
-
-
-\begin{figure}[h]
+\begin{figure}[!htp]
  \centering
      \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=7cm]{images/Hessian_spectre_resnet50_init_cifar10.png}
@@ -244,8 +241,7 @@ e.g. the bump}
      \caption{Largest 90 eigen values of ResNet50 model on CIFAR10 for different Receptive Fields }
     \label{fig:hessian_resnet50_cifar10}
 \end{figure}
-
-\begin{figure}[H]
+\begin{figure}[!htp]
   \begin{subfigure}[b]{0.45\textwidth}
       \centering
       \includegraphics[width=7cm]{images/resnet50_CIFAR10_training.png}
@@ -261,7 +257,6 @@ e.g. the bump}
     \end{subfigure}
      \caption{Training of ResNet50 on CIFAR10 and Tiny ImageNet}
      \label{fig:training_trajectories}
-
 \end{figure}
 But how does this affect the features or representations that these models learn? Next we show the similarity of the
 internal representation two different seeds of the ReseNet50 model on CIFAR10., It is observed that the introduction of
@@ -271,11 +266,7 @@ representations in deeper layers for individual seeds exhibit dissimilarity, as 
 basins, differing not only from the majority of the network but also from corresponding layers in other seeds. The representation
  similarly was calculated using the first 1000 images of the test set and we use the Centred linear Kernel Alignment
  \citep{kornblithSimilarityNeuralNetwork2019} as similarity measure.
-
-
-
-
-\begin{figure}[H]
+\begin{figure}[!htp]
         \centering
         \begin{subfigure}[b]{0.475\textwidth}
             \centering
@@ -292,9 +283,7 @@ basins, differing not only from the majority of the network but also from corres
             {{\small Receptive Field 213}}    
             \label{fig:similarity_lvl2}
         \end{subfigure}
-
         \vskip\baselineskip
-
         \begin{subfigure}[b]{0.475\textwidth}   
             \centering 
             \includegraphics[width=0.7\textwidth]{images/resnet50_level3_similarity_cifar10.png}
@@ -318,20 +307,17 @@ basins, differing not only from the majority of the network but also from corres
         \label{fig:similarity_resenet50}
     \end{figure}
 
-    In \Cref{fig:similarity_resenet50} we can see that the similarity between layers decreases as we increase the receptive
-    field. This is consistent with our findings that the loss landscape for large receptive fields are more ``rugged''
-    (see \Cref{fig:hessian_resnet50_cifar10,fig:hessian_vgg_cifar10})
-    meaning that deeper layers, which learn specific features for the task \citep{yosinskiHowTransferableAre2014,
-    roAutoLRLayerwisePruning2021}, converge to a more varied set of representations thus the
-    increase in dissimilarity. The shallow layers in the other hand, the representations between solutions converge to a
-    more uniform set of representations, hence their similarity. This is congruent with the notion that shallow layer
-    learn ``general'' features that are beneficial for transfer learning \citep{roAutoLRLayerwisePruning2021}.
-    Conversely, smaller receptive fields have a smoother loss landscape and in consequence, even the deeper, specific layers
-    in the network converge to similar representations. Another explanation is that due to the size of the receptive
-    field, the network's ability to learn nuanced features (those that normally would be learned in deeper layers) is
-    impaired, thus affecting its performance and similarities.
-
-
+In \Cref{fig:similarity_resenet50} we can see that the similarity between layers decreases as we increase the receptive
+field. This is consistent with our findings that the loss landscape for large receptive fields are more ``rugged''
+(see \Cref{fig:hessian_resnet50_cifar10,fig:hessian_vgg_cifar10})
+meaning that deeper layers, which learn specific features for the task \citep{yosinskiHowTransferableAre2014, roAutoLRLayerwisePruning2021}, converge to a more varied set of representations thus the
+increase in dissimilarity. The shallow layers in the other hand, the representations between solutions converge to a
+more uniform set of representations, hence their similarity. This is congruent with the notion that shallow layer
+learn ``general'' features that are beneficial for transfer learning \citep{roAutoLRLayerwisePruning2021}.
+Conversely, smaller receptive fields have a smoother loss landscape and in consequence, even the deeper, specific layers
+in the network converge to similar representations. Another explanation is that due to the size of the receptive
+field, the network's ability to learn nuanced features (those that normally would be learned in deeper layers) is
+impaired, thus affecting its performance and similarities.
 
 \subsection{Large Receptive Field for Tiny ImageNet}
 \label{subsec:LargeRFTI}

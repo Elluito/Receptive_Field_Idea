@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1703021032 "main.aux" "main.bbl" "main" 1703021033 0
+["bibtex main"] 1703081723 "main.aux" "main.bbl" "main" 1703081723 0
   "./references.bib" 1702158871 712129 ab8d13e32042aeb435b08f52157b8f0c ""
   "/usr/share/texmf-dist/bibtex/bst/natbib/abbrvnat.bst" 1689853683 26532 66bed5cc59495faaa3f9ae9af9fa5e42 ""
-  "main.aux" 1703021030 20595 2e8c98226fc7c2df3bb84efca02726e4 "pdflatex"
+  "main.aux" 1703081721 20651 9194b17299833aafdfde2e4a6721f3a4 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1703021029 "main.tex" "main.pdf" "main" 1703021033 2
+["pdflatex"] 1703081720 "main.tex" "main.pdf" "main" 1703081723 2
   "/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc" 1689853683 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1689853683 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm" 1689853683 4524 6bce29db5bc272ba5f332261583fee9c ""
@@ -120,6 +120,11 @@
   "/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty" 1689853683 5949 3f3fd50a8cc94c3d4cbf4fc66cd3df1c ""
   "/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd" 1689853683 961 6518c6525a34feb5e8250ffa91731cff ""
   "/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd" 1689853683 961 d02606146ba5601b5645f987c92e6193 ""
+  "/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty" 1689853683 2222 78b930a5a6e3dc2ac69b78c2057b94d7 ""
+  "/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty" 1689853683 4173 c989ee3ced31418e3593916ab26c793a ""
+  "/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty" 1689853683 88393 1adf6fa3f245270d06e3d4f8910f7fc5 ""
+  "/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty" 1689853683 4474 f04cd1cc7bd76eb033e6fb12eb6a0d77 ""
+  "/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty" 1689853683 2444 70065bddd85997dc1fd0bb7ae634e5fa ""
   "/usr/share/texmf-dist/tex/latex/atveryend/atveryend.sty" 1689853683 19336 ce7ae9438967282886b3b036cfad1e4d ""
   "/usr/share/texmf-dist/tex/latex/auxhook/auxhook.sty" 1689853683 3935 57aa3c3e203a5c2effb4d2bd2efbc323 ""
   "/usr/share/texmf-dist/tex/latex/base/article.cls" 1689853683 20144 d5ecf0a5140c8d8d8b72cbe86e320eff ""
@@ -194,7 +199,7 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1699439038 6768054 e4fa156f173b8bcd2820a7d496c950af ""
   "00-introduction.tex" 1701947173 3851 dcf32358f470595f9aadc60fd66e4d4d ""
   "01-related_works.tex" 1701894326 1963 4c6ff6964abb8bfa19ee81681774d768 ""
-  "03-experimental_results.tex" 1703021029 33204 85369badc1563392dccf78faefcdab86 ""
+  "03-experimental_results.tex" 1703081082 33174 18512f270ee5a00c6940fe6ea0ca92a6 ""
   "09-supplementary_material.tex" 1703019262 34168 1cfbdb80668f53c7e6844fc1f085a69a ""
   "images/Hessian_spectre_resnet50_init_cifar10.png" 1701629875 23668 2a63ddfbc376f22d67652fc9712b7b21 ""
   "images/Hessian_spectre_resnet50_trained_cifar10.png" 1701629164 116659 c6072bbb5ffd703a70fa6a9f23950c52 ""
@@ -206,10 +211,10 @@
   "images/resnet50_level2_similarity_cifar10.png" 1701340674 24843 0bba119f36579dc9c8f6957f88d7d9d6 ""
   "images/resnet50_level3_similarity_cifar10.png" 1701340856 22235 11d8d416b7ec1a04303b0fc178ee2af5 ""
   "images/resnet50_level4_similarity_cifar10.png" 1701340871 21728 03874180863d54d8f32830a6de4b2474 ""
-  "main.aux" 1703021030 20595 2e8c98226fc7c2df3bb84efca02726e4 "pdflatex"
-  "main.bbl" 1703021033 4522 3c1542d2200e3f9af8e7e56115d77306 "bibtex main"
-  "main.out" 1703021030 2875 b95282f37f599d186d49d62d89183760 "pdflatex"
-  "main.tex" 1703018227 5498 a9748948962c7ee3c058efa870eb7738 ""
+  "main.aux" 1703081721 20651 9194b17299833aafdfde2e4a6721f3a4 "pdflatex"
+  "main.bbl" 1703081723 4522 3c1542d2200e3f9af8e7e56115d77306 "bibtex main"
+  "main.out" 1703081721 2875 b95282f37f599d186d49d62d89183760 "pdflatex"
+  "main.tex" 1703081720 5824 2cb0a1383fac87683859bf92f2aeb7c0 ""
   "neurips_2023.sty" 1699454450 11306 7a0a622cd12ea31e106a743bb7d4c3c6 ""
   (generated)
   "main.aux"

@@ -23,10 +23,10 @@
 \citation{kobayashiInterpretationResNetVisualization2020}
 \citation{kimDeadPixelTest2023}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{1}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{2}{section.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {3}Experimental results}{2}{section.3}\protected@file@percent }
 \@writefile{tdo}{\contentsline {todo}{Here I never talked of how I calculated the receptive field, which I used a libary that calculates the gradient projection in a dummy input space with a projected gradient of 1 in the middle of all the fueature maps of the last convolutional layer for the two architectures. }{2}{section*.2}\protected@file@percent }
-\pgfsyspdfmark {pgfid1}{20112833}{32124398}
+\pgfsyspdfmark {pgfid1}{20112833}{29178357}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Experimental settings}{2}{subsection.3.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Manipulating the Receptive Field}{2}{subsection.3.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Receptive Field, Accuracy and Pruning}{2}{subsection.3.3}\protected@file@percent }
@@ -51,9 +51,12 @@
 \@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces VGG and ReseNet50 on Tiny ImageNet with fine tuning for 100 epochs and pruning rate of 0.9\relax }}{4}{table.caption.7}\protected@file@percent }
 \newlabel{tab:tiny imagenet fine tuning pruning rate 09}{{5}{4}{VGG and ReseNet50 on Tiny ImageNet with fine tuning for 100 epochs and pruning rate of 0.9\relax }{table.caption.7}{}}
 \newlabel{tab:tiny imagenet fine tuning pruning rate 09@cref}{{[table][5][]5}{[1][4][]4}}
+\citation{kornblithSimilarityNeuralNetwork2019}
+\citation{yosinskiHowTransferableAre2014,roAutoLRLayerwisePruning2021}
+\citation{roAutoLRLayerwisePruning2021}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Loss Landscape and Receptive Field}{5}{subsection.3.5}\protected@file@percent }
 \@writefile{tdo}{\contentsline {todo}{Talk about the training trajectory in \Cref  {fig:training_trajectories}, and mention that the figures in \Cref  {fig:hessian_vgg_cifar10,fig:hessian_resnet50_cifar10} explain such behaviour. In \Cref  {fig:images-resnet50_CIFAR10_training-png} I trained for double the epochs trying to show that even with more training the larger receptive field cannot match the smaller receptive field. The bump seen arround 200 epochs is due tu the learning rate schedule, which is a cosine schedule with Tmax=200, right now im training a model with Tmax=400 to see if it that claim is still valid. All the accuracies seen throughtout the document correspond to the best model while trainig e.g. the bump}{5}{section*.8}\protected@file@percent }
-\pgfsyspdfmark {pgfid2}{20112833}{36467236}
+\pgfsyspdfmark {pgfid2}{20112833}{37821659}
 \newlabel{subfig:Hessian_VGG_before_training}{{1a}{5}{Before Training\relax }{figure.caption.9}{}}
 \newlabel{subfig:Hessian_VGG_before_training@cref}{{[subfigure][1][1]1a}{[1][5][]5}}
 \newlabel{sub@subfig:Hessian_VGG_before_training}{{a}{5}{Before Training\relax }{figure.caption.9}{}}
@@ -64,7 +67,7 @@
 \newlabel{sub@subfig:Hessian_VGG_after_training@cref}{{[subfigure][2][1]1b}{[1][5][]5}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Largest 90 eigen values of VGG model on CIFAR10 for different Receptive Fields \todo [inline]{Here I can put labels like $\lambda $ and $P(\lambda )$. Larger font} \relax }}{5}{figure.caption.9}\protected@file@percent }
 \@writefile{tdo}{\contentsline {todo}{Here I can put labels like $\lambda $ and $P(\lambda )$. Larger font}{5}{section*.11}\protected@file@percent }
-\pgfsyspdfmark {pgfid4}{20112833}{20974502}
+\pgfsyspdfmark {pgfid4}{20112833}{25361777}
 \newlabel{fig:hessian_vgg_cifar10}{{1}{5}{Largest 90 eigen values of VGG model on CIFAR10 for different Receptive Fields \todo [inline]{Here I can put labels like $\lambda $ and $P(\lambda )$. Larger font} \relax }{section*.11}{}}
 \newlabel{fig:hessian_vgg_cifar10@cref}{{[figure][1][]1}{[1][5][]5}}
 \newlabel{subfig:}{{2a}{5}{Before Training\relax }{figure.caption.12}{}}
@@ -78,7 +81,6 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Largest 90 eigen values of ResNet50 model on CIFAR10 for different Receptive Fields \relax }}{5}{figure.caption.12}\protected@file@percent }
 \newlabel{fig:hessian_resnet50_cifar10}{{2}{5}{Largest 90 eigen values of ResNet50 model on CIFAR10 for different Receptive Fields \relax }{figure.caption.12}{}}
 \newlabel{fig:hessian_resnet50_cifar10@cref}{{[figure][2][]2}{[1][5][]5}}
-\citation{kornblithSimilarityNeuralNetwork2019}
 \newlabel{fig:images-resnet50_CIFAR10_training-png}{{3a}{6}{ResNet50 training for different Receptive fields on CIFAR10\relax }{figure.caption.13}{}}
 \newlabel{fig:images-resnet50_CIFAR10_training-png@cref}{{[subfigure][1][3]3a}{[1][5][]6}}
 \newlabel{sub@fig:images-resnet50_CIFAR10_training-png}{{a}{6}{ResNet50 training for different Receptive fields on CIFAR10\relax }{figure.caption.13}{}}
@@ -90,23 +92,91 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Training of ResNet50 on CIFAR10 and Tiny ImageNet\relax }}{6}{figure.caption.13}\protected@file@percent }
 \newlabel{fig:training_trajectories}{{3}{6}{Training of ResNet50 on CIFAR10 and Tiny ImageNet\relax }{figure.caption.13}{}}
 \newlabel{fig:training_trajectories@cref}{{[figure][3][]3}{[1][5][]6}}
-\citation{yosinskiHowTransferableAre2014,roAutoLRLayerwisePruning2021}
-\citation{roAutoLRLayerwisePruning2021}
-\newlabel{fig:similarity_lvl1}{{4a}{7}{Network1}{figure.caption.14}{}}
-\newlabel{fig:similarity_lvl1@cref}{{[subfigure][1][4]4a}{[1][6][]7}}
-\newlabel{sub@fig:similarity_lvl1}{{a}{7}{Network1}{figure.caption.14}{}}
-\newlabel{sub@fig:similarity_lvl1@cref}{{[subfigure][1][4]4a}{[1][6][]7}}
-\newlabel{fig:similarity_lvl2}{{4b}{7}{Network2}{figure.caption.14}{}}
-\newlabel{fig:similarity_lvl2@cref}{{[subfigure][2][4]4b}{[1][6][]7}}
-\newlabel{sub@fig:similarity_lvl2}{{b}{7}{Network2}{figure.caption.14}{}}
-\newlabel{sub@fig:similarity_lvl2@cref}{{[subfigure][2][4]4b}{[1][6][]7}}
-\newlabel{fig:similarity_lvl3}{{4c}{7}{}{figure.caption.14}{}}
-\newlabel{fig:similarity_lvl3@cref}{{[subfigure][3][4]4c}{[1][6][]7}}
-\newlabel{sub@fig:similarity_lvl3}{{c}{7}{}{figure.caption.14}{}}
-\newlabel{sub@fig:similarity_lvl3@cref}{{[subfigure][3][4]4c}{[1][6][]7}}
-\newlabel{fig:similarity_lvl4}{{4d}{7}{}{figure.caption.14}{}}
-\newlabel{fig:similarity_lvl4@cref}{{[subfigure][4][4]4d}{[1][6][]7}}
-\newlabel{sub@fig:similarity_lvl4}{{d}{7}{}{figure.caption.14}{}}
-\newlabel{sub@fig:similarity_lvl4@cref}{{[subfigure][4][4]4d}{[1][6][]7}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Representation similarity}}{7}{figure.caption.14}\protected@file@percent }
-\newlabel{fig:s
+\newlabel{fig:similarity_lvl1}{{4a}{6}{Network1}{figure.caption.14}{}}
+\newlabel{fig:similarity_lvl1@cref}{{[subfigure][1][4]4a}{[1][5][]6}}
+\newlabel{sub@fig:similarity_lvl1}{{a}{6}{Network1}{figure.caption.14}{}}
+\newlabel{sub@fig:similarity_lvl1@cref}{{[subfigure][1][4]4a}{[1][5][]6}}
+\newlabel{fig:similarity_lvl2}{{4b}{6}{Network2}{figure.caption.14}{}}
+\newlabel{fig:similarity_lvl2@cref}{{[subfigure][2][4]4b}{[1][5][]6}}
+\newlabel{sub@fig:similarity_lvl2}{{b}{6}{Network2}{figure.caption.14}{}}
+\newlabel{sub@fig:similarity_lvl2@cref}{{[subfigure][2][4]4b}{[1][5][]6}}
+\newlabel{fig:similarity_lvl3}{{4c}{6}{}{figure.caption.14}{}}
+\newlabel{fig:similarity_lvl3@cref}{{[subfigure][3][4]4c}{[1][5][]6}}
+\newlabel{sub@fig:similarity_lvl3}{{c}{6}{}{figure.caption.14}{}}
+\newlabel{sub@fig:similarity_lvl3@cref}{{[subfigure][3][4]4c}{[1][5][]6}}
+\newlabel{fig:similarity_lvl4}{{4d}{6}{}{figure.caption.14}{}}
+\newlabel{fig:similarity_lvl4@cref}{{[subfigure][4][4]4d}{[1][5][]6}}
+\newlabel{sub@fig:similarity_lvl4}{{d}{6}{}{figure.caption.14}{}}
+\newlabel{sub@fig:similarity_lvl4@cref}{{[subfigure][4][4]4d}{[1][5][]6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Representation similarity}}{6}{figure.caption.14}\protected@file@percent }
+\newlabel{fig:similarity_resenet50}{{4}{6}{Representation similarity}{figure.caption.14}{}}
+\newlabel{fig:similarity_resenet50@cref}{{[figure][4][]4}{[1][5][]6}}
+\citation{ballardParallelVisualComputation1983}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Large Receptive Field for Tiny ImageNet}{7}{subsection.3.6}\protected@file@percent }
+\newlabel{subsec:LargeRFTI}{{3.6}{7}{Large Receptive Field for Tiny ImageNet}{subsection.3.6}{}}
+\newlabel{subsec:LargeRFTI@cref}{{[subsection][6][3]3.6}{[1][7][]7}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces ReseNet50 with large Receptive Field on Tiny ImageNet with pruning rate of 0.9\relax }}{7}{table.caption.15}\protected@file@percent }
+\newlabel{tab:tiny imagenet largeRF one shot pruning rate 09}{{6}{7}{ReseNet50 with large Receptive Field on Tiny ImageNet with pruning rate of 0.9\relax }{table.caption.15}{}}
+\newlabel{tab:tiny imagenet largeRF one shot pruning rate 09@cref}{{[table][6][]6}{[1][7][]7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Large Receptive Field for CIFAR10}{7}{subsection.3.7}\protected@file@percent }
+\newlabel{subsec:LargeRFCF10}{{3.7}{7}{Large Receptive Field for CIFAR10}{subsection.3.7}{}}
+\newlabel{subsec:LargeRFCF10@cref}{{[subsection][7][3]3.7}{[1][7][]7}}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces ReseNet50 with large receptive field in CIFAR10\relax }}{7}{table.caption.16}\protected@file@percent }
+\newlabel{tab:cifar10 largeRF one shot pruning rate 09}{{7}{7}{ReseNet50 with large receptive field in CIFAR10\relax }{table.caption.16}{}}
+\newlabel{tab:cifar10 largeRF one shot pruning rate 09@cref}{{[table][7][]7}{[1][7][]7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.8}Width and Depth cannot Recover Information}{7}{subsection.3.8}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces ReseNet50 with 2X and 3X width with receptive field of 3100 Tiny ImageNet \relax }}{7}{table.caption.17}\protected@file@percent }
+\newlabel{tab:cifar10 largeRF one shot pruning rate 09}{{8}{7}{ReseNet50 with 2X and 3X width with receptive field of 3100 Tiny ImageNet \relax }{table.caption.17}{}}
+\newlabel{tab:cifar10 largeRF one shot pruning rate 09@cref}{{[table][8][]8}{[1][7][]7}}
+\@writefile{tdo}{\contentsline {todo}{Here I'm planning to include results of a ResNet24 model that has all the same components as ReseNet50 but it simply is more shallow. Also, I am running experiments on width for two more receptive fields, 318 and 1415. Also, I have not implemented / shown the information measure we talked about with Netta, but, as Netta suggested, it can simply be $\frac  {\text  {Difference in Accuracy}}{\text  {Dense Accuracy}}$}{7}{section*.18}\protected@file@percent }
+\pgfsyspdfmark {pgfid5}{20112833}{6860308}
+\bibdata{references.bib}
+\bibcite{ballardParallelVisualComputation1983}{{1}{1983}{{Ballard et~al.}}{{Ballard, Hinton, and Sejnowski}}}
+\bibcite{dengImageNetLargescaleHierarchical2009}{{2}{2009}{{Deng et~al.}}{{Deng, Dong, Socher, Li, Li, and {Fei-Fei}}}}
+\bibcite{devlinBERTPretrainingDeep2019}{{3}{2019}{{Devlin et~al.}}{{Devlin, Chang, Lee, and Toutanova}}}
+\bibcite{goodfellowDeepLearning2016}{{4}{2016}{{Goodfellow et~al.}}{{Goodfellow, Bengio, and Courville}}}
+\bibcite{kimDeadPixelTest2023}{{5}{2023}{{Kim et~al.}}{{Kim, Choi, Jang, Lee, Jeong, and Kim}}}
+\bibcite{kobayashiInterpretationResNetVisualization2020}{{6}{2020}{{Kobayashi and Shouno}}{{}}}
+\bibcite{kornblithSimilarityNeuralNetwork2019}{{7}{2019}{{Kornblith et~al.}}{{Kornblith, Norouzi, Lee, and Hinton}}}
+\bibcite{lecunDeepLearning2015}{{8}{2015}{{LeCun et~al.}}{{LeCun, Bengio, and Hinton}}}
+\bibcite{luoUnderstandingEffectiveReceptive2016}{{9}{2016}{{Luo et~al.}}{{Luo, Li, Urtasun, and Zemel}}}
+\bibcite{roAutoLRLayerwisePruning2021}{{10}{2021}{{Ro and Choi}}{{}}}
+\bibcite{oordWaveNetGenerativeModel2016}{{11}{2016}{{van~den Oord et~al.}}{{van~den Oord, Dieleman, Zen, Simonyan, Vinyals, Graves, Kalchbrenner, Senior, and Kavukcuoglu}}}
+\bibcite{yosinskiHowTransferableAre2014}{{12}{2014}{{Yosinski et~al.}}{{Yosinski, Clune, Bengio, and Lipson}}}
+\bibcite{zhouObjectDetectorsEmerge2015}{{13}{2015}{{Zhou et~al.}}{{Zhou, Khosla, Lapedriza, Oliva, and Torralba}}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Conclusions and Future work}{8}{section.4}\protected@file@percent }
+\newlabel{sec:conclusion}{{4}{8}{Conclusions and Future work}{section.4}{}}
+\newlabel{sec:conclusion@cref}{{[section][4][]4}{[1][7][]8}}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Supplementary Material}{9}{section.1}\protected@file@percent }
+\newlabel{sec:supplementary}{{I}{9}{Supplementary Material}{section.1}{}}
+\newlabel{sec:supplementary@cref}{{[section][1][]I}{[1][8][]9}}
+\newlabel{sebsec:implementation_details}{{I}{9}{Model Implementation details}{section*.20}{}}
+\newlabel{sebsec:implementation_details@cref}{{[section][1][]I}{[1][8][]9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {I.1}One-shot Solutions with Multiple Pruning Rates}{9}{subsection.1.1}\protected@file@percent }
+\newlabel{subsec:OneShotPruningRates}{{I.1}{9}{One-shot Solutions with Multiple Pruning Rates}{subsection.1.1}{}}
+\newlabel{subsec:OneShotPruningRates@cref}{{[subsection][1][1]I.1}{[1][9][]9}}
+\@writefile{lot}{\contentsline {table}{\numberline {S1}{\ignorespaces VGG and ResNet50 on CIFAR10 and pruning rate 0.8\relax }}{9}{table.caption.21}\protected@file@percent }
+\newlabel{tab:cifar10 pruning rate08}{{S1}{9}{VGG and ResNet50 on CIFAR10 and pruning rate 0.8\relax }{table.caption.21}{}}
+\newlabel{tab:cifar10 pruning rate08@cref}{{[table][1][]S1}{[1][9][]9}}
+\@writefile{lot}{\contentsline {table}{\numberline {S2}{\ignorespaces VGG and ResNet50 Tiny ImageNet pruning rate 0.8\relax }}{9}{table.caption.22}\protected@file@percent }
+\newlabel{tab:tiny imagenet pruning rate08}{{S2}{9}{VGG and ResNet50 Tiny ImageNet pruning rate 0.8\relax }{table.caption.22}{}}
+\newlabel{tab:tiny imagenet pruning rate08@cref}{{[table][2][]S2}{[1][9][]9}}
+\@writefile{lot}{\contentsline {table}{\numberline {S3}{\ignorespaces VGG and ResNet50 on CIFAR10 and pruning rate 0.7\relax }}{10}{table.caption.24}\protected@file@percent }
+\newlabel{tab:cifar10 pruning rate07}{{S3}{10}{VGG and ResNet50 on CIFAR10 and pruning rate 0.7\relax }{table.caption.24}{}}
+\newlabel{tab:cifar10 pruning rate07@cref}{{[table][3][]S3}{[1][9][]10}}
+\@writefile{lot}{\contentsline {table}{\numberline {S4}{\ignorespaces VGG and ResNet50 on Tiny ImageNet and pruning rate 0.7\relax }}{10}{table.caption.25}\protected@file@percent }
+\newlabel{tab:tiny imagenet pruning rate07}{{S4}{10}{VGG and ResNet50 on Tiny ImageNet and pruning rate 0.7\relax }{table.caption.25}{}}
+\newlabel{tab:tiny imagenet pruning rate07@cref}{{[table][4][]S4}{[1][10][]10}}
+\@writefile{lot}{\contentsline {table}{\numberline {S5}{\ignorespaces VGG and ResNet50 CIFAR10 pruning rate 0.6\relax }}{10}{table.caption.27}\protected@file@percent }
+\newlabel{tab:cifar10 pruning rate06}{{S5}{10}{VGG and ResNet50 CIFAR10 pruning rate 0.6\relax }{table.caption.27}{}}
+\newlabel{tab:cifar10 pruning rate06@cref}{{[table][5][]S5}{[1][10][]10}}
+\@writefile{lot}{\contentsline {table}{\numberline {S6}{\ignorespaces VGG and ResNet50 Tiny ImageNet pruning rate 0.6\relax }}{11}{table.caption.28}\protected@file@percent }
+\newlabel{tab:tiny imagenet pruning rate06}{{S6}{11}{VGG and ResNet50 Tiny ImageNet pruning rate 0.6\relax }{table.caption.28}{}}
+\newlabel{tab:tiny imagenet pruning rate06@cref}{{[table][6][]S6}{[1][10][]11}}
+\@writefile{lot}{\contentsline {table}{\numberline {S7}{\ignorespaces VGG and ResNet50 on CIFAR10 with pruning rate 0.5\relax }}{11}{table.caption.30}\protected@file@percent }
+\newlabel{tab:cifar10 pruning rate05}{{S7}{11}{VGG and ResNet50 on CIFAR10 with pruning rate 0.5\relax }{table.caption.30}{}}
+\newlabel{tab:cifar10 pruning rate05@cref}{{[table][7][]S7}{[1][11][]11}}
+\@writefile{lot}{\contentsline {table}{\numberline {S8}{\ignorespaces VGG and ResNet50 Tiny ImageNet with pruning rate 0.5\relax }}{11}{table.caption.31}\protected@file@percent }
+\newlabel{tab:tiny imagenet pruning rate05}{{S8}{11}{VGG and ResNet50 Tiny ImageNet with pruning rate 0.5\relax }{table.caption.31}{}}
+\newlabel{tab:tiny imagenet pruning rate05@cref}{{[table][8][]S8}{[1][11][]11}}
+\gdef \@abspage@last{11}
