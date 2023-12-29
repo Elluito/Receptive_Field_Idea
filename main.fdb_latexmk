@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1703081723 "main.aux" "main.bbl" "main" 1703081723 0
-  "./references.bib" 1702158871 712129 ab8d13e32042aeb435b08f52157b8f0c ""
+["bibtex main"] 1703189625 "main.aux" "main.bbl" "main" 1703189626 0
+  "./references.bib" 1703155667 712129 ab8d13e32042aeb435b08f52157b8f0c ""
   "/usr/share/texmf-dist/bibtex/bst/natbib/abbrvnat.bst" 1689853683 26532 66bed5cc59495faaa3f9ae9af9fa5e42 ""
-  "main.aux" 1703081721 20651 9194b17299833aafdfde2e4a6721f3a4 "pdflatex"
+  "main.aux" 1703189626 21027 b86fc94d3e0d9ba556a8c15aaafd56bd "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1703081720 "main.tex" "main.pdf" "main" 1703081723 2
+["pdflatex"] 1703189625 "main.tex" "main.pdf" "main" 1703189626 0
   "/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc" 1689853683 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1689853683 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm" 1689853683 4524 6bce29db5bc272ba5f332261583fee9c ""
@@ -199,7 +199,7 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1699439038 6768054 e4fa156f173b8bcd2820a7d496c950af ""
   "00-introduction.tex" 1701947173 3851 dcf32358f470595f9aadc60fd66e4d4d ""
   "01-related_works.tex" 1701894326 1963 4c6ff6964abb8bfa19ee81681774d768 ""
-  "03-experimental_results.tex" 1703081082 33174 18512f270ee5a00c6940fe6ea0ca92a6 ""
+  "03-experimental_results.tex" 1703189621 34565 a842215a5e936732d0fe23282b083c9e ""
   "09-supplementary_material.tex" 1703019262 34168 1cfbdb80668f53c7e6844fc1f085a69a ""
   "images/Hessian_spectre_resnet50_init_cifar10.png" 1701629875 23668 2a63ddfbc376f22d67652fc9712b7b21 ""
   "images/Hessian_spectre_resnet50_trained_cifar10.png" 1701629164 116659 c6072bbb5ffd703a70fa6a9f23950c52 ""
@@ -211,9 +211,9 @@
   "images/resnet50_level2_similarity_cifar10.png" 1701340674 24843 0bba119f36579dc9c8f6957f88d7d9d6 ""
   "images/resnet50_level3_similarity_cifar10.png" 1701340856 22235 11d8d416b7ec1a04303b0fc178ee2af5 ""
   "images/resnet50_level4_similarity_cifar10.png" 1701340871 21728 03874180863d54d8f32830a6de4b2474 ""
-  "main.aux" 1703081721 20651 9194b17299833aafdfde2e4a6721f3a4 "pdflatex"
-  "main.bbl" 1703081723 4522 3c1542d2200e3f9af8e7e56115d77306 "bibtex main"
-  "main.out" 1703081721 2875 b95282f37f599d186d49d62d89183760 "pdflatex"
+  "main.aux" 1703189626 21027 b86fc94d3e0d9ba556a8c15aaafd56bd "pdflatex"
+  "main.bbl" 1703189625 4522 3c1542d2200e3f9af8e7e56115d77306 "bibtex main"
+  "main.out" 1703189626 2913 45af52d450671a8b54bb3878b0276761 "pdflatex"
   "main.tex" 1703081720 5824 2cb0a1383fac87683859bf92f2aeb7c0 ""
   "neurips_2023.sty" 1699454450 11306 7a0a622cd12ea31e106a743bb7d4c3c6 ""
   (generated)

@@ -311,9 +311,9 @@ In \Cref{fig:similarity_resenet50} we can see that the similarity between layers
 field. This is consistent with our findings that the loss landscape for large receptive fields are more ``rugged''
 (see \Cref{fig:hessian_resnet50_cifar10,fig:hessian_vgg_cifar10})
 meaning that deeper layers, which learn specific features for the task \citep{yosinskiHowTransferableAre2014, roAutoLRLayerwisePruning2021}, converge to a more varied set of representations thus the
-increase in dissimilarity. The shallow layers in the other hand, the representations between solutions converge to a
-more uniform set of representations, hence their similarity. This is congruent with the notion that shallow layer
-learn ``general'' features that are beneficial for transfer learning \citep{roAutoLRLayerwisePruning2021}.
+increase in dissimilarity. The shallow layers in the other hand, converge to a
+more uniform set of representations, hence their similarity. This is congruent with the notion that shallow layer learn
+``general '' features that subsequent layers build more specific/complex features. \citep{roAutoLRLayerwisePruning2021}.
 Conversely, smaller receptive fields have a smoother loss landscape and in consequence, even the deeper, specific layers
 in the network converge to similar representations. Another explanation is that due to the size of the receptive
 field, the network's ability to learn nuanced features (those that normally would be learned in deeper layers) is
@@ -358,7 +358,7 @@ impaired, thus affecting its performance and similarities.
 
 
 
-\subsection{Width and Depth cannot Recover Information}
+\subsection{Width and Depth can partially Recover Information}
 
 One question is : Is the information from the receptive field not recoverable by the width or depth of the model? To
 answer this, we modified the width of ResNet50 by 2x and 3x times and found that despite the marginal improvement in performance, the width
@@ -369,19 +369,37 @@ accurate information can be extracted by coarsely tuned units \citep{ballardPara
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
 % \usepackage{multirow}
-\begin{table}[H]
+%\begin{table}[H]
+%  \centering
+%\begin{tabular}{@{}cccc@{}}
+%\toprule
+%\textbf{Receptive Field} & \textbf{Width} & \textbf{Test Accuracy} & \multicolumn{1}{l}{\textbf{Original Test
+%Accuracy (Width=$\times1$)}} \\ \midrule
+%\multirow{2}{0}{3100}    & $\times2$             & 26.33                        & \multirow{2}{0}{22.84$\pm$0.370}                    \\
+%                         & $\times3$             & 26.04                        
+%                         \\ \bottomrule\\ %\cmidrule(lr){2-3}
+%\end{tabular}
+%\caption{ReseNet50 with 2X and 3X width with receptive field of 3100 Tiny ImageNet }
+%\label{tab:cifar10  largeRF one shot pruning rate 09}
+%\end{table}
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{multirow}
+\begin{table}[!htp]
   \centering
 \begin{tabular}{@{}cccc@{}}
 \toprule
-\textbf{Receptive Field} & \textbf{Width} & \textbf{Test Accuracy} & \multicolumn{1}{l}{\textbf{Original Test
-Accuracy (Width=$\times1$)}} \\ \midrule
-\multirow{2}{0}{3100}    & $\times2$             & 26.33                        & \multirow{2}{0}{22.84$\pm$0.370}                    \\
-                         & $\times3$             & 26.04                        
-                         \\ \bottomrule\\ %\cmidrule(lr){2-3}
+\multirow{2}{*}{\textbf{Receptive Field}} & \multicolumn{3}{c}{\textbf{Width}}                                                                                       \\ \cmidrule(l){2-4} 
+                                          & \multicolumn{1}{c}{\textbf{$\times$1}} & \multicolumn{1}{l}{\textbf{$\times$2}} & \multicolumn{1}{l}{\textbf{$\times$3}} \\ \midrule
+318                                       & 59.10$\pm$0.368                        & 60.97                                  & \textbf{Pending}                       \\
+1415                                      & 32.00$\pm$0.192                        & 37.36                                  & 38.0                                   \\
+3100                                      & 22.84$\pm$0.370                        & 26.33
+& 26.04                                  \\ \bottomrule \\
 \end{tabular}
-\caption{ReseNet50 with 2X and 3X width with receptive field of 3100 Tiny ImageNet }
-\label{tab:cifar10  largeRF one shot pruning rate 09}
+\caption{Accuracies for ResNet50 Model on Tiny ImageNet for different woitdhs, We can see here that withd can only recover information on very large receptive fields. This means that for a small receptive field all information necessary for the task is included is available to the network.}
+\label{tab:width_experiments}
 \end{table}
+
 \todo[inline]{Here I'm planning to include results of a ResNet24 model that has all the same components as ReseNet50 but it simply is more shallow. Also, I am running experiments on width for two more receptive fields, 318 and 1415. Also, I have not implemented / shown the information measure we talked about with Netta, but, as Netta suggested, it can simply be $\frac{\text{Difference in Accuracy}}{\text{Dense Accuracy}}$}
 
 % PIXEL IMPORTANCE SECTION 
