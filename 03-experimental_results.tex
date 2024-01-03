@@ -5,10 +5,10 @@
  datasets. 
 
 
- \todo[inline]{Here I never talked of how I calculated the receptive field, which I used a libary that calculates
- the gradient projection in a dummy input space with a projected gradient of 1 in the middle of all the fueature maps of the
-last convolutional layer for the two architectures.
-}
+%  \todo[inline]{Here I never talked of how I calculated the receptive field, which I used a libary that calculates
+%  the gradient projection in a dummy input space with a projected gradient of 1 in the middle of all the fueature maps of the
+% last convolutional layer for the two architectures.
+% }
 
 
 \subsection{Experimental settings}
@@ -197,13 +197,13 @@ encompass larger eigen values. This means that the landscape of that models has 
 (and ascent) making the landscape more chaotic  and difficult to traverse than for smaller receptive fields (maybe search
 a citation that corroborates this?).
 
-\todo[inline]{Talk about the training trajectory in \Cref{fig:training_trajectories}, and mention that the figures in
-\Cref{fig:hessian_vgg_cifar10,fig:hessian_resnet50_cifar10} explain such behaviour. In \Cref{fig:images-resnet50_CIFAR10_training-png}
-I trained for double the epochs trying to show that even with more training the
-larger receptive field cannot match the smaller receptive field. The bump seen arround 200 epochs is due tu the learning
-rate schedule, which is a cosine schedule with Tmax=200, right now im training a model with Tmax=400 to see if it that
-claim is still valid. All the accuracies seen throughtout the document correspond to the best model while trainig
-e.g. the bump}
+% \todo[inline]{Talk about the training trajectory in \Cref{fig:training_trajectories}, and mention that the figures in
+% \Cref{fig:hessian_vgg_cifar10,fig:hessian_resnet50_cifar10} explain such behaviour. In \Cref{fig:images-resnet50_CIFAR10_training-png}
+% I trained for double the epochs trying to show that even with more training the
+% larger receptive field cannot match the smaller receptive field. The bump seen arround 200 epochs is due tu the learning
+% rate schedule, which is a cosine schedule with Tmax=200, right now im training a model with Tmax=400 to see if it that
+% claim is still valid. All the accuracies seen throughtout the document correspond to the best model while trainig
+% e.g. the bump}
 
 
 
@@ -220,9 +220,7 @@ e.g. the bump}
     \caption{After training}
     \label{subfig:Hessian_VGG_after_training}
      \end{subfigure}
-     \caption{Largest 90 eigen values of VGG model on CIFAR10 for different Receptive Fields \todo[inline]{Here I can
-         put labels
-     like $\lambda$ and $P(\lambda)$. Larger font} }
+      \caption{Largest 90 eigen values of VGG model on CIFAR10 for different Receptive Fields}%\todo[inline]{Here I can put labels like $\lambda$ and $P(\lambda)$. Larger font} }
     \label{fig:hessian_vgg_cifar10}
 \end{figure}
 \begin{figure}[!htp]
@@ -400,7 +398,7 @@ accurate information can be extracted by coarsely tuned units \citep{ballardPara
 \label{tab:width_experiments}
 \end{table}
 
-\todo[inline]{Here I'm planning to include results of a ResNet24 model that has all the same components as ReseNet50 but it simply is more shallow. Also, I am running experiments on width for two more receptive fields, 318 and 1415. Also, I have not implemented / shown the information measure we talked about with Netta, but, as Netta suggested, it can simply be $\frac{\text{Difference in Accuracy}}{\text{Dense Accuracy}}$}
+% \todo[inline]{Here I'm planning to include results of a ResNet24 model that has all the same components as ReseNet50 but it simply is more shallow. Also, I am running experiments on width for two more receptive fields, 318 and 1415. Also, I have not implemented / shown the information measure we talked about with Netta, but, as Netta suggested, it can simply be $\frac{\text{Difference in Accuracy}}{\text{Dense Accuracy}}$}
 
 % PIXEL IMPORTANCE SECTION 
 %

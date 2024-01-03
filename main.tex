@@ -99,7 +99,11 @@
 
 
 \begin{abstract}
-In this paper we empirically investigate the effect that the receptive field has on a network's trainability and its one-shot potential. Our results are validated on VGG and ReseNet50 architecture and in CIFAR10 and Tiny ImageNet. We also fine-tune the models to test their real-world application.
+In this paper, we empirically investigate the effect that the receptive field has on a network's trainability and its one-shot potential. We show that by increasing the receptive field there is information that cannot be recovered by width or depth and that such information shapes not only the type of features that the net network learns but also its loss landscape.
+Our results are validated on the VGG and ReseNet50 architecture trained on CIFAR10 and Tiny ImageNet datasets.
+
+
+
 \end{abstract}
 
 \section{Introduction}
@@ -108,14 +112,14 @@ In this paper we empirically investigate the effect that the receptive field has
 \input{01-related_works.tex}
 \section{Experimental results}
 \input{03-experimental_results.tex}
-\section{Conclusions and Future work}
+\section{Conclusions and Future Work}
 \label{sec:conclusion}
 
 
 
  In this work, we showed how the receptive field affects the loss landscape of neural networks along with its representations and its behaviour on the input image.
 It is important to note that there are other ways to manipulate the receptive field such as changing the kernel size of the
-convolutional networks,stride, and dilation of the convolutional networks. In this work, used the minimum
+convolutional networks, stride, and dilation of the convolutional networks. In this work, used the minimum
 intervention that would not modify the number of weights of the models as we manipulated the receptive field of the
 models. Additionally, as we changed the receptive field of the models we changed the  size of internal representations,
 which can greatly affect the behaviour of the models. Future work will concentrate on testing other ways to manipulate
